@@ -567,7 +567,7 @@ save_pd_background.air_or_thermal_diffuse_coef_2
     _definition.update            2023-02-02
     _description.text
 ;
-    The value of the first coefficient used in an equation representing the
+    The value of the second coefficient used in an equation representing the
     background due to thermal diffuse scattering and/or air scattering, in a
     calculated diffractogram. This equation can account for background
     contributions at both high and low q. The second coefficient accounts for
@@ -1367,7 +1367,7 @@ save_pd_background.peak_id
     where two peaks are severely overlapped, it may be desirable to list them as
     a single peak.
 
-    A peak ID must be included for every amorphous peak.
+    A peak ID must be included for every background peak.
 ;
     _name.category_id             pd_background
     _name.object_id               peak_id
@@ -9573,8 +9573,8 @@ save_pd_pref_orient_march_dollase.r
     March distribution parameter describing the degree of
     preferred-orientation in a given phase and diffractogram.
     In general, a value of 1 describes an unoriented phase.
-    r in the range (1, ∞) describes orientation of disk-like
-    particles, and r in the range (0,1) describes orientation
+    r in the range (0,1) describes orientation of disk-like
+    particles, and r in the range (1, ∞) describes orientation
     of needle-like particles.
 
     The direction of the correction must also be given using
@@ -9583,7 +9583,7 @@ save_pd_pref_orient_march_dollase.r
     contribution of each direction must be specified with
     _pd_pref_orient_March_Dollase.fract.
 
-    Omitting _pd_pref_orient.* implies that no preferred-
+    Omitting _pd_pref_orient* implies that no preferred-
     orientation correction has been used.
 
     See Dollase, W. A. (1986). J. Appl. Cryst. 19, 267-272 for
@@ -9858,7 +9858,7 @@ save_pd_pref_orient_spherical_harmonics.texture_index
     _description.text
 ;
     The texture index, as described by equation 4.212
-    in Bunge, as T = sum_{i,j} [c_{i,j)^2 / (2i+1)].
+    in Bunge, as T = sum_{i,j} [c_{i,j}^2 / (2i+1)].
 
     It gives the value [1, ∞), where 1 is a random powder
     and ∞ is an ideal single crystal.
@@ -9947,7 +9947,7 @@ save_pd_pref_orient_spherical_harmonics.y_ij
     by space-group symmetry. The parity of the term is given
     by its sign; odd parity is negative, even is positive.
 
-    Omitting _pd_pref_orient.* implies that no preferred-
+    Omitting _pd_pref_orient* implies that no preferred-
     orientation correction has been used.
 
     See Jarvinen, M. (1993). J. Appl. Cryst. 26, 525-531 for
