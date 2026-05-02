@@ -8720,7 +8720,7 @@ save_
 save_pd_instr_detector.diffrn_detector_id
 
     _definition.id                '_pd_instr_detector.diffrn_detector_id'
-    _definition.update            2026-05-02
+    _definition.update            2025-06-26
     _description.text
 ;
     Identifier of a detector used for data collection described using data names
@@ -14698,8 +14698,4 @@ save_
        MULTIBLOCK_CORE is first. This changes the order in which categories
        are defined so that CIF_IMG_HEAD cannot block definitions in
        MULTIBLOCK_CORE.
-
-       Updated type contents of _pd_instr_detector.diffrn_detector_id
-       to match linked data item.
-
 ;
