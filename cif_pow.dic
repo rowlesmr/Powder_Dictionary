@@ -14890,4 +14890,7 @@ save_
        MULTIBLOCK_CORE is first. This changes the order in which categories
        are defined so that CIF_IMG_HEAD cannot block definitions in
        MULTIBLOCK_CORE.
+
+       Added PD_PEAK_PHASE_MAP to allow a mapping between peaks and the
+       phases which contribute to them in each diffractogram.
 ;
