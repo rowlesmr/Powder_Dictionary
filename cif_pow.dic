@@ -14214,7 +14214,7 @@ save_REFLN
     _definition.id                REFLN
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2016-11-09
+    _definition.update            2026-05-19
     _description.text
 ;
     The CATEGORY of data items used to describe the reflection data
@@ -14228,6 +14228,7 @@ save_REFLN
          '_refln.id'
          '_pd_refln.phase_id'
          '_refln.diffractogram_id'
+         '_refln.structure_id'
 
 save_
 
