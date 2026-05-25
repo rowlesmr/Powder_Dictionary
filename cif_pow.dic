@@ -350,6 +350,33 @@ save_PD_AMORPHOUS
          '_pd_amorphous.peak_id'
          '_pd_amorphous.diffractogram_id'
 
+    _description_example.case
+;
+         data_block_1
+           _pd_diffractogram.id   A_HISTOGRAM
+
+           loop_
+           _pd_peak.id
+           _pd_peak.d_spacing
+           _pd_peak.pk_height
+           _pd_peak.width_2theta
+           a  4.31    2  3.2
+           b  4.25   17  0.193
+           c  3.34  101  0.198
+           d  3.11    4  4.7
+
+           loop_
+           _pd_amorphous.peak_id
+           a d
+;
+    _description_example.detail
+;
+         In the diffraction pattern identified by `A_HISTOGRAM`,
+         there are four peaks with the given details. Two
+         peaks are marked as amorphous. The remaining peaks
+         would be assigned elsewhere to other crystalline phases.
+;
+
 save_
 
 save_pd_amorphous.diffractogram_id
