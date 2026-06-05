@@ -14894,7 +14894,7 @@ save_
 
        Added PD_PEAK_PHASE_MAP to allow a mapping between peaks and the
        phases which contribute to them in each diffractogram.
-       
+
        Added _refln.structure_id as key to REFLN to maintain compatibilty with
        MULTIBLOCK_CORE.
 ;
