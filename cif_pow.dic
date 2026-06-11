@@ -15,7 +15,7 @@ data_CIF_POW
     _dictionary.title             CIF_POW
     _dictionary.class             Instance
     _dictionary.version           2.5.0
-    _dictionary.date              2026-05-19
+    _dictionary.date              2026-06-11
     _dictionary.uri
 https://raw.githubusercontent.com/COMCIFS/Powder_Dictionary/master/cif_pow.dic
     _dictionary.ddl_conformance   4.2.0
@@ -6183,6 +6183,56 @@ save_pd_proc.d_spacing_su
     _name.category_id             pd_proc
     _name.object_id               d_spacing_su
     _name.linked_item_id          '_pd_proc.d_spacing'
+    _units.code                   angstroms
+
+    _import.get                   [{'file':templ_attr.cif  'save':general_su}]
+
+save_
+
+save_pd_proc.d_spacing_perpendicular
+
+    _definition.id                '_pd_proc.d_spacing_perpendicular'
+    _definition.update            2026-06-11
+    _description.text
+;
+    d-spacing perpendicular, when combined with d-spacing, allows for a
+    two-dimensional treatment of neutron TOF powder data, taking into
+    account the variation of the diffraction angle, θ, and wavelength, λ.
+
+    The values are given by
+
+    d~⟂~ = sqrt(λ² - 2 λₖ² ln(cosθ))  (Å)
+
+    where λ is the wavelength in ångstroms, θ is the Bragg angle, and λₖ is
+    an arbitrary constant, see _pd_proc_overall.lambda_k
+
+    See:
+    Philipp Jacobs et al. (2015). J. Appl. Cryst. 48, 1627-1636.
+    Philipp Jacobs et al. (2017). J. Appl. Cryst. 50, 866-875.
+    Andreas Houben et al. (2023). J. Appl. Cryst. 56, 633-642.
+;
+    _name.category_id             pd_proc
+    _name.object_id               d_spacing_perpendicular
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _enumeration.range            0.0:
+    _units.code                   angstroms
+
+save_
+
+save_pd_proc.d_spacing_perpendicular_su
+
+    _definition.id                '_pd_proc.d_spacing_perpendicular_su'
+    _definition.update            2026-06-11
+    _description.text
+;
+    Standard uncertainty of _pd_proc.d_spacing_perpendicular.
+;
+    _name.category_id             pd_proc
+    _name.object_id               d_spacing_perpendicular_su
+    _name.linked_item_id          '_pd_proc.d_spacing_perpendicular'
     _units.code                   angstroms
 
     _import.get                   [{'file':templ_attr.cif  'save':general_su}]
@@ -12455,6 +12505,26 @@ save_pd_proc.info_special_details
 
 save_
 
+save_pd_proc_overall.lambda_k
+
+    _definition.id                '_pd_proc_overall.lambda_k'
+    _definition.update            2026-06-11
+    _description.text
+;
+    Arbitray constant wavelength used in the calculation of
+    d-spacing_perpendicular - see _pd_proc.d_spacing_perpendicular.
+;
+    _name.category_id             pd_proc_overall
+    _name.object_id               lambda_k
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _enumeration.range            0.0:
+    _units.code                   angstroms
+
+save_
+
 save_pd_proc.number_of_points
 
     _definition.id                '_pd_proc.number_of_points'
@@ -14460,7 +14530,7 @@ save_
 
        Deprecated _pd_refln.wavelength_id after consultation with PDDMG.
 ;
-         2.5.0                    2026-05-19
+         2.5.0                    2026-06-11
 ;
        ## Retain above version number and increment date until final
        ## release
@@ -14718,4 +14788,6 @@ save_
 
        Added _refln.structure_id as key to REFLN to maintain compatibilty with
        MULTIBLOCK_CORE.
+
+       Added _pd_proc.d_spacing_perpendicular and _pd_proc_overall.lambda_k.
 ;
