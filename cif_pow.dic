@@ -6216,6 +6216,62 @@ save_pd_proc.d_spacing_su
 
 save_
 
+save_pd_proc.d_spacing_perpendicular
+
+    _definition.id                '_pd_proc.d_spacing_perpendicular'
+    _definition.update            2026-06-11
+    _description.text
+;
+    d-spacing perpendicular, when combined with d-spacing, allows for a
+    two-dimensional treatment of neutron TOF powder data, taking into
+    account the variation of the diffraction angle, 2θ, and wavelength, λ.
+
+    The values are given by
+
+    d~⟂~ = sqrt(λ² - 2 λₖ² ln(cosθ))  (Å)
+
+    where λ is the wavelength in ångstroms, θ is the Bragg angle, and λₖ is
+    an arbitrary constant, taken to have a value of 1 Å.
+
+    The formula for d~⟂~ is a solution to the differential equation
+    demanding an orthogonal axis to d-spacing in the (2θ,λ) plane.
+    Any (2θ,λ)-coordinate can be transformed to a (d,d~⟂~)-coordinate,
+    with the effect that sinusoidal Bragg-reflections become vertical
+    with minimal peak width in the orthogonal d~⟂~-direction.
+
+    See:
+    Philipp Jacobs et al. (2015). J. Appl. Cryst. 48, 1627-1636.
+    Philipp Jacobs et al. (2017). J. Appl. Cryst. 50, 866-875.
+    Andreas Houben et al. (2023). J. Appl. Cryst. 56, 633-642.
+;
+    _name.category_id             pd_proc
+    _name.object_id               d_spacing_perpendicular
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _enumeration.range            0.0:
+    _units.code                   angstroms
+
+save_
+
+save_pd_proc.d_spacing_perpendicular_su
+
+    _definition.id                '_pd_proc.d_spacing_perpendicular_su'
+    _definition.update            2026-06-11
+    _description.text
+;
+    Standard uncertainty of _pd_proc.d_spacing_perpendicular.
+;
+    _name.category_id             pd_proc
+    _name.object_id               d_spacing_perpendicular_su
+    _name.linked_item_id          '_pd_proc.d_spacing_perpendicular'
+    _units.code                   angstroms
+
+    _import.get                   [{'file':templ_attr.cif  'save':general_su}]
+
+save_
+
 save_pd_proc.diffractogram_id
 
     _definition.id                '_pd_proc.diffractogram_id'
@@ -14745,4 +14801,6 @@ save_
 
        Added _refln.structure_id as key to REFLN to maintain compatibilty with
        MULTIBLOCK_CORE.
+
+       Added _pd_proc.d_spacing_perpendicular.
 ;
