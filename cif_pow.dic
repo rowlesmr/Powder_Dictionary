@@ -5331,8 +5331,8 @@ save_PD_MEAS
 
     loop_
       _category_key.name
-         '_pd_meas.point_id'
          '_pd_meas.diffractogram_id'
+         '_pd_meas.point_id'
 
 save_
 
