@@ -3131,8 +3131,8 @@ save_PD_CALIB_OFFSET
 
     loop_
       _category_key.name
-         '_pd_calib_offset.id'
          '_pd_calib_offset.detector_id'
+         '_pd_calib_offset.id'
 
 save_
 
