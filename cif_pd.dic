@@ -6129,8 +6129,8 @@ save_PD_PROC
 
     loop_
       _category_key.name
-         '_pd_proc.point_id'
          '_pd_proc.diffractogram_id'
+         '_pd_proc.point_id'
 
 save_
 
