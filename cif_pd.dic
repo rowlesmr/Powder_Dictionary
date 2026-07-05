@@ -10744,8 +10744,8 @@ save_pd_pref_orient.geom
     The functional form of the March-Dollase or spherical harmonics
     correction depends on whether the data were collected in symmetric
     or asymmetric reflection or transmission, or capillary geometries.
-    See Section 3, Rowles & Buckley (2017) J. Appl. Cryst. (2017).
-    50, 240-251, for further discussion.
+    See Section 3, Rowles & Buckley (2017) J. Appl. Cryst. 50, 240-251,
+    for further discussion.
 
     In most Rietveld software, 'symmetric reflection' is the
     default implementation.
