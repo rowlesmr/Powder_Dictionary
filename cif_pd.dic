@@ -458,7 +458,7 @@ save_PD_BACKGROUND
 
     The computed background values should include all normalization corrections,
     and thus are specified on the same scale as the other calculated intensities
-    such as _pd_calc.intensity_total. Indeed the sum of _pd_calc.intensity_bkg
+    such as _pd_calc.intensity_total. Indeed, the sum of _pd_calc.intensity_bkg
     and _pd_calc.intensity_net should be _pd_calc.intensity_total.
 
     If more than one type of background is specified for a particular
@@ -492,7 +492,7 @@ save_PD_BACKGROUND
 
          bkg = (1.5) +
                (0.0747*q^2^ + 0.954/q^2^) +
-               (0.0132*(q^4^/2) + 0.912*(2/q^4^))
+               (0.00132*(q^4^/2) + 0.912*(2/q^4^))
 ;
 ;
          _pd_diffractogram.id   A_DIFFRACTION_PATTERN
@@ -508,7 +508,7 @@ save_PD_BACKGROUND
 
          bkg = (1.5) +
                (0.0747*q^2^ + 0.954/q^2^) +
-               (0.0132*(q^4^/2) + 0.912*(2/q^4^))
+               (0.00132*(q^4^/2) + 0.912*(2/q^4^))
 ;
 ;
          _pd_diffractogram.id   A_DIFFRACTION_PATTERN
@@ -590,8 +590,8 @@ save_PD_BACKGROUND
          6.720. The standard polynomial equation is
              bkg = 1049.69/X + 5016.63/X^2^
 
-         The X-coordinate against which the background function is calculated
-         is 2θ in degrees.
+         The X-coordinate against which both background functions are
+         calculated is 2θ in degrees.
 ;
 
 save_
