@@ -2048,6 +2048,8 @@ save_pd_calc_component.intensity_net
     _pd_calc_component.point_id, and the
     measured/processed/calculated data must be looped with
     _pd_data.point_id.
+
+    See also _pd_calc.component_intensities_net.
 ;
     _name.category_id             pd_calc_component
     _name.object_id               intensity_net
@@ -2086,6 +2088,8 @@ save_pd_calc_component.intensity_total
     _pd_calc_component.point_id, and the
     measured/processed/calculated data must be looped with
     _pd_data.point_id.
+
+    See also _pd_calc.component_intensities_total.
 ;
     _name.category_id             pd_calc_component
     _name.object_id               intensity_total
@@ -5077,6 +5081,8 @@ save_pd_calc.component_intensities_net
     _pd_calc.component_intensities_* should be looped with
     either _pd_proc.intensity_net, _pd_meas.counts_*, and/or
     _pd_meas.intensity_*.
+
+    See also _pd_calc_component.intensity_net.
 ;
     _name.category_id             pd_calc
     _name.object_id               component_intensities_net
@@ -5116,6 +5122,8 @@ save_pd_calc.component_intensities_total
     _pd_calc.component_intensities_* should be looped with
     either _pd_proc.intensity_net, _pd_meas.counts_*, and/or
     _pd_meas.intensity_*.
+
+    See also _pd_calc_component.intensity_total.
 ;
     _name.category_id             pd_calc
     _name.object_id               component_intensities_total
