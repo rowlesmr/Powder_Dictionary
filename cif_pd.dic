@@ -6847,7 +6847,7 @@ save_PD_DIFFRACTOGRAM
             _pd_proc.intensity_total
             _pd_proc.ls_weight
             _pd_calc.intensity_total
-            _pd_proc.intensity_bkg_calc
+            _pd_calc.intensity_bkg
             5.01   43.364   0.0402   25.994961    25.994961
             5.04   38.007   0.0505   26.200290    26.200290
             5.07   38.318   0.0465   26.404083    26.404083
@@ -6904,7 +6904,7 @@ save_PD_DIFFRACTOGRAM
                _pd_proc.intensity_total
                _pd_proc.ls_weight
                _pd_calc.intensity_total
-               _pd_proc.intensity_bkg_calc
+               _pd_calc.intensity_bkg
                5.01   43.364   0.0402   25.994961    25.994961
                5.04   38.007   0.0505   26.200290    26.200290
                5.07   38.318   0.0465   26.404083    26.404083
