@@ -13059,8 +13059,6 @@ save_PD_QPA_EXTERNAL_STD
     _description_example.case
 ;
          data_ext_std_diffractogram
-            _audit.schema                Custom
-            _pd_instr.id                 labmachine
             _pd_diffractogram.id         THE_REFERENCE
             _pd_diffractogram.instr_id   labmachine
             _pd_diffractogram.spec_id    REF_spec
@@ -13071,11 +13069,9 @@ save_PD_QPA_EXTERNAL_STD
             _pd_spec.id       REF_spec
             _pd_spec.prep_id  REF_prep
 
-            loop_
-            _pd_phase_mass.phase_id
-            _pd_phase_mass.absolute
-            _pd_phase_mass.absolute_su
-            NIST_ALUMINA_676A   99.02   1.11
+            _pd_phase.id  NIST_ALUMINA_676A
+            _pd_phase_mass.absolute     99.02
+            _pd_phase_mass.absolute_su   1.11
 
             _pd_qpa_external_std.k_factor           293.36
             _pd_qpa_external_std.diffractogram_id   THE_REFERENCE
@@ -13084,7 +13080,6 @@ save_PD_QPA_EXTERNAL_STD
 
          data_diffractogram_block
             _audit.schema                Custom
-            _pd_instr.id                 labmachine
             _pd_diffractogram.id         DIFFRACTOGRAM_2
             _pd_diffractogram.instr_id   labmachine
             _pd_diffractogram.spec_id    UNK_spec
