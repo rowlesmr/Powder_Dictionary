@@ -1967,8 +1967,8 @@ save_PD_CALC_COMPONENT
     loop_
       _category_key.name
          '_pd_calc_component.diffractogram_id'
-         '_pd_calc_component.point_id'
          '_pd_calc_component.phase_id'
+         '_pd_calc_component.point_id'
 
     _description_example.case
 ;
