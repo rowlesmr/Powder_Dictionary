@@ -160,9 +160,9 @@ save_CHEMICAL_CONN_BOND
 
     loop_
       _category_key.name
+         '_chemical_conn_bond.phase_id'
          '_chemical_conn_bond.atom_1'
          '_chemical_conn_bond.atom_2'
-         '_chemical_conn_bond.phase_id'
 
 save_
 
