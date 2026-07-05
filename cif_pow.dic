@@ -5049,8 +5049,8 @@ save_PD_CALC
 
     loop_
       _category_key.name
-         '_pd_calc.diffractogram_id'
          '_pd_calc.point_id'
+         '_pd_calc.diffractogram_id'
 
 save_
 
