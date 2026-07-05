@@ -611,7 +611,7 @@ save_pd_background.air_or_thermal_diffuse_coef_1
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
@@ -666,7 +666,7 @@ save_pd_background.air_or_thermal_diffuse_coef_2
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
@@ -819,7 +819,7 @@ save_pd_background.air_or_thermal_diffuse_order
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
