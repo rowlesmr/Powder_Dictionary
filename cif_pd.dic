@@ -11755,7 +11755,8 @@ save_PD_PROC_INFO_AUTHOR
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
+    **DEPRECATED**
+    Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
 
     This section contains information about the person(s)
     who processed the data.
@@ -12110,7 +12111,8 @@ save_pd_proc_ls.pref_orient_corr
     _definition.update            2023-01-06
     _description.text
 ;
-    DEPRECATED. Use _pd_pref_orient.special_details, or if
+    **DEPRECATED**.
+    Use _pd_pref_orient.special_details, or if
     the correction can be described as a March-Dollase
     or spherical harmonics correction, use
     _pd_pref_orient_March_Dollase.* or
