@@ -4869,6 +4869,8 @@ save_PD_DATA
       _description_example.case
       _description_example.detail
 ;
+         _pd_diffractogram.id  PATTERN_1
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
@@ -4894,6 +4896,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  PATTERN_2
+
          loop_
          _pd_data.point_id
          _pd_meas.time_of_flight
@@ -4926,6 +4930,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  PATTERN_3
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
@@ -4953,6 +4959,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  RAW_DATA
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
