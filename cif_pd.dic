@@ -2179,9 +2179,10 @@ save_PD_CALC_OVERALL
     _description_example.detail
 ;
          Tabulation of diffraction data consisting of measured and
-         calculated data, where the calculated data also include intensities
-         ascribed to the different phases which make up the model. The phases to
-         which the intensities belong are given by the value of
+         calculated data, where the calculated data were calculated by the
+         Rietveld method. The calculated data also includes intensities
+         ascribed to the different phases which make up the model. The phases
+         to which the intensities belong are given by the value of
          _pd_calc_overall.component_presentation_order. These values correspond
          to the _pd_phase.id values of the phases contributing to the current
          diffractogram. As _pd_calc.component_intensities_net is used, the
