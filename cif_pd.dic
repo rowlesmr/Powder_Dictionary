@@ -347,8 +347,8 @@ save_PD_AMORPHOUS
 
     loop_
       _category_key.name
-         '_pd_amorphous.peak_id'
          '_pd_amorphous.diffractogram_id'
+         '_pd_amorphous.peak_id'
 
     _description_example.case
 ;
