@@ -4865,8 +4865,8 @@ save_PD_DATA
 
     loop_
       _category_key.name
-         '_pd_data.diffractogram_id'
          '_pd_data.point_id'
+         '_pd_data.diffractogram_id'
 
     loop_
       _description_example.case
