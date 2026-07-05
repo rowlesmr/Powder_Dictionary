@@ -14345,9 +14345,9 @@ save_REFLN
 
     loop_
       _category_key.name
-         '_refln.diffractogram_id'
          '_refln.id'
          '_pd_refln.phase_id'
+         '_refln.diffractogram_id'
          '_refln.structure_id'
 
 save_
