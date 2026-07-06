@@ -13657,6 +13657,8 @@ save_PD_QPA_OVERALL
 
     For a review on quantitative phase analysis, see Chapter 3.9 of
     International Tables, Vol. H, and references therein.
+
+    For usage examples, see the other PD_QPA_* categories.
 ;
     _name.category_id             CIF_PD_HEAD
     _name.object_id               PD_QPA_OVERALL
