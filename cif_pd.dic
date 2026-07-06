@@ -15,7 +15,7 @@ data_CIF_PD
     _dictionary.title             CIF_PD
     _dictionary.class             Instance
     _dictionary.version           2.5.0
-    _dictionary.date              2026-06-29
+    _dictionary.date              2026-07-05
     _dictionary.uri
 https://raw.githubusercontent.com/COMCIFS/cif_pd/master/cif_pd.dic
     _dictionary.ddl_conformance   4.2.0
@@ -10432,8 +10432,8 @@ save_PD_PHASE_MASS
 
     _definition.id                PD_PHASE_MASS
     _definition.scope             Category
-    _definition.class             Loop
-    _definition.update            2022-12-03
+    _definition.class             Set
+    _definition.update            2026-07-05
     _description.text
 ;
     This category describes the percent composition by mass of
@@ -10474,7 +10474,26 @@ save_PD_PHASE_MASS
          Blocks containing information about more than one phase or
          diffractogram must set a non-default value for _audit.schema.
 ;
+;
+         data_b1
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_1
+         _pd_phase_mass.percent  45.45(42)
 
+         data_b2
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_2
+         _pd_phase_mass.percent  37.42(63)
+
+         data_b3
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_3
+         _pd_phase_mass.percent  17.13(53)
+;
+;
+         Identical as previous example, but values distributed amongst
+         blocks so as to maintain the default value of _audit.schema.
+;
 ;
          _audit.schema         Custom
 
@@ -14554,7 +14573,7 @@ save_
 
        Deprecated _pd_refln.wavelength_id after consultation with PDDMG.
 ;
-         2.5.0                    2026-06-29
+         2.5.0                    2026-07-05
 ;
        ## Retain above version number and increment date until final
        ## release
@@ -14817,4 +14836,6 @@ save_
 
        Renamed dictionary from CIF_POW to CIF_PD and the head category from
        PD_GROUP to CIF_PD_HEAD.
+
+       Convert PD_PHASE_MASS to Set category.
 ;
