@@ -11920,11 +11920,15 @@ save_PD_PROC_LS
     _definition.update            2025-06-19
     _description.text
 ;
-    This section is used to define parameters relevant to a
-    relevant to *the* least-squares fit to the powder diffractogram indicated by `_pd_proc_ls.diffractogram_id`, using a Rietveld
+    This section is used to define parameters relevant to the 
+    least-squares fit to the powder diffractogram indicated
+    by _pd_proc_ls.diffractogram_id, using a Rietveld
     or other full-profile (e.g. Pawley or Le Bail methods) fit.
 
-    Note that values in this section refer to full-pattern fitting.
+    Note that values in this section refer to full-pattern fitting,
+    and are only valid when referring to, or calculated for, the
+    indicated powder diffractogram.
+
     Use the appropriate items for single-crystal analyses from the
     core CIF dictionary for structure refinements using diffraction
     intensities estimated from a powder diffractogram by
