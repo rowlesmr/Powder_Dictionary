@@ -12701,36 +12701,38 @@ save_PD_QPA_CALIB_FACTOR
     _description_example.case
 ;
          data_phase_A
-             _pd_phase.id   PHASE_A
-             _pd_qpa_calib_factor.I_over_Ic   3.26
+             _pd_phase.id                    PHASE_A
+             _pd_qpa_calib_factor.I_over_Ic  3.26
 
          data_phase_B
-             _pd_phase.id   PHASE_B
-             _pd_qpa_calib_factor.I_over_Ic   4.79
+             _pd_phase.id                    PHASE_B
+             _pd_qpa_calib_factor.I_over_Ic  4.79
 
          data_phase_C
-             _pd_phase.id   PHASE_C
-             _pd_qpa_calib_factor.I_over_Ic   1.00
+             _pd_phase.id                    PHASE_C
+             _pd_qpa_calib_factor.I_over_Ic  1.00
 
-         data_diffractogram_block
-             _audit.schema          Custom
-             _pd_diffractogram.id   UNKNOWN_DIFFRACTOGRAM
+         data_diffractogram_block_I
+             _pd_diffractogram.id   UNKNOWN
+             _pd_phase.id           PHASE_A
 
-             loop_
-             _pd_phase_mass.phase_id
-             _pd_phase_mass.percent
-             PHASE_A   52.02(15)
-             PHASE_B   17.90(15)
-             PHASE_C   30.08(14)
+             _pd_phase_mass.percent           52.02(15)
+             _pd_qpa_overall.method          I/Ic
+             _pd_qpa_intensity_factor.value  242.54(81)
 
-             _pd_qpa_overall.method   I/Ic
+         data_diffractogram_block_II
+             _pd_diffractogram.id   UNKNOWN
+             _pd_phase.id           PHASE_B
 
-             loop_
-             _pd_qpa_intensity_factor.phase_id
-             _pd_qpa_intensity_factor.value
-             PHASE_A   242.54(81)
-             PHASE_B   122.6(12)
-             PHASE_C    43.02(25)
+             _pd_phase_mass.percent           17.90(15)
+             _pd_qpa_intensity_factor.value  122.6(12)
+
+         data_diffractogram_block_III
+             _pd_diffractogram.id   UNKNOWN
+             _pd_phase.id           PHASE_C
+
+             _pd_phase_mass.percent          30.08(14)
+             _pd_qpa_intensity_factor.value  43.02(25)
 ;
     _description_example.detail
 ;
@@ -12747,10 +12749,9 @@ save_PD_QPA_CALIB_FACTOR
          confirmed by following the I/Ic algorithm detailed in
          _pd_qpa_overall.method.
 
-         As there are loops containing data names linked to key data names of
-         Set categories (_pd_phase_mass.phase_id and
-         _pd_qpa_intensity_factor.phase_id), the _audit.schema value for the
-         last block must take the value 'Custom'
+         This example is the same as for PD_QPA_INTENSITY_FACTOR, but with
+         values distributed amongst blocks such that a custom _audit.schema
+         value is not needed.
 ;
 
 save_
@@ -13389,7 +13390,8 @@ save_PD_QPA_INTENSITY_FACTOR
          confirmed by following the I/Ic algorithm detailed in
          _pd_qpa_overall.method.
 
-         As we are looping data names linked to _pd_phase.id, the _audit.schema
+         This example is the same as for PD_QPA_CALIB_FACTOR, but as we are
+         looping data names linked to _pd_phase.id, the _audit.schema
          is set to Custom.
 ;
 
