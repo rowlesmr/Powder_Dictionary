@@ -2489,6 +2489,8 @@ save_PD_CALIB_D_TO_TOF
       _description_example.case
       _description_example.detail
 ;
+         _pd_diffractogram.id   TOF_DATA_BANK_1
+
          loop_
          _pd_calib_d_to_tof.id
          _pd_calib_d_to_tof.power
@@ -2504,6 +2506,8 @@ save_PD_CALIB_D_TO_TOF
                           + 0.08099 * d_spacing^2^
 ;
 ;
+         _pd_diffractogram.id   TOF_DATA_BANK_2
+
          loop_
          _pd_calib_d_to_tof.id
          _pd_calib_d_to_tof.power
