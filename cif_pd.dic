@@ -10163,13 +10163,16 @@ save_PD_PEAK_OVERALL
     _category_key.name            '_pd_peak_overall.id'
     _description_example.case
 ;
-         _pd_peak_overall.id        PEAK_GROUP_1
+         _pd_diffractogram.id   UNKNOWN_PEAKS
+
+         _pd_peak_overall.id    PEAK_GROUP_1
          _pd_peak.special_details
     ;
           Peak positions allowed to refine freely. Peak widths
           constrained to follow UVW relationship. Peak shape
           constrained to be Lorentzian.
     ;
+
          loop_
          _pd_peak.id
          _pd_peak.2theta_centroid
