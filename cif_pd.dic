@@ -2911,6 +2911,8 @@ save_PD_CALIB_INCIDENT_INTENSITY
       _description_example.case
       _description_example.detail
 ;
+        _audit_dataset.id   b007cf82-6338-4387-9abb-2825c6bf37b6
+
         _pd_calib_incident_intensity.instr_id           a3643812
         _pd_calib_incident_intensity.incident_counts    4231
         _pd_calib_incident_intensity.special_details    'From beam monitor.'
@@ -2935,6 +2937,8 @@ save_PD_CALIB_INCIDENT_INTENSITY
         SRM1976_15341c3a.
 ;
 ;
+        _audit_dataset.id   b007cf82-6338-4387-9abb-2825c6bf37b6
+
         _pd_diffractogram.id        WHITE_POWDER
         _pd_diffractogram.instr_id  a3643812
 
@@ -2957,6 +2961,9 @@ save_PD_CALIB_INCIDENT_INTENSITY
         the incident intensity calibration linked to that instrument.
         The SU values have also been calculated for the
         _pd_proc.intensity_total values.
+
+        Identical _audit_dataset.id value show that the identical
+        instrument id values must refer to the same instrument.
 ;
 
 save_
