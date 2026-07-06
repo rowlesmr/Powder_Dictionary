@@ -458,9 +458,8 @@ save_PD_BACKGROUND
 
     The computed background values should include all normalization corrections,
     and thus are specified on the same scale as the other calculated intensities
-    such as _pd_calc.intensity_total. Indeed the sum of
-    _pd_proc.intensity_bkg_calc and _pd_calc.intensity_net should be
-    _pd_calc.intensity_total.
+    such as _pd_calc.intensity_total. Indeed, the sum of _pd_calc.intensity_bkg
+    and _pd_calc.intensity_net should be _pd_calc.intensity_total.
 
     If more than one type of background is specified for a particular
     diffractogram, then it is assumed they are linearly additive.
@@ -493,7 +492,7 @@ save_PD_BACKGROUND
 
          bkg = (1.5) +
                (0.0747*q^2^ + 0.954/q^2^) +
-               (0.0132*(q^4^/2) + 0.912*(2/q^4^))
+               (0.00132*(q^4^/2) + 0.912*(2/q^4^))
 ;
 ;
          _pd_diffractogram.id   A_DIFFRACTION_PATTERN
@@ -509,7 +508,7 @@ save_PD_BACKGROUND
 
          bkg = (1.5) +
                (0.0747*q^2^ + 0.954/q^2^) +
-               (0.0132*(q^4^/2) + 0.912*(2/q^4^))
+               (0.00132*(q^4^/2) + 0.912*(2/q^4^))
 ;
 ;
          _pd_diffractogram.id   A_DIFFRACTION_PATTERN
@@ -591,8 +590,8 @@ save_PD_BACKGROUND
          6.720. The standard polynomial equation is
              bkg = 1049.69/X + 5016.63/X^2^
 
-         The X-coordinate against which the background function is calculated
-         is 2θ in degrees.
+         The X-coordinate against which both background functions are
+         calculated is 2θ in degrees.
 ;
 
 save_
@@ -612,7 +611,7 @@ save_pd_background.air_or_thermal_diffuse_coef_1
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
@@ -667,7 +666,7 @@ save_pd_background.air_or_thermal_diffuse_coef_2
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
@@ -820,7 +819,7 @@ save_pd_background.air_or_thermal_diffuse_order
 
     The background equation is of the form:
 
-        bkg = Sum( C1~j~ * (q~2*j~/j!) + C2~j~ * (j!/q~2*j~), j=0:N)
+        bkg = Sum( C1~j~ * (q^2*j^/j!) + C2~j~ * (j!/q^2*j^), j=0:N)
 
     where C1 and C2 represent _pd_background.air_or_thermal_diffuse_coef_1 and
     coef_2, respectively, j is the order of the equation as given in
@@ -2048,6 +2047,8 @@ save_pd_calc_component.intensity_net
     _pd_calc_component.point_id, and the
     measured/processed/calculated data must be looped with
     _pd_data.point_id.
+
+    See also _pd_calc.component_intensities_net.
 ;
     _name.category_id             pd_calc_component
     _name.object_id               intensity_net
@@ -2086,6 +2087,8 @@ save_pd_calc_component.intensity_total
     _pd_calc_component.point_id, and the
     measured/processed/calculated data must be looped with
     _pd_data.point_id.
+
+    See also _pd_calc.component_intensities_total.
 ;
     _name.category_id             pd_calc_component
     _name.object_id               intensity_total
@@ -2179,9 +2182,10 @@ save_PD_CALC_OVERALL
     _description_example.detail
 ;
          Tabulation of diffraction data consisting of measured and
-         calculated data, where the calculated data also include intensities
-         ascribed to the different phases which make up the model. The phases to
-         which the intensities belong are given by the value of
+         calculated data, where the calculated data were calculated by the
+         Rietveld method. The calculated data also includes intensities
+         ascribed to the different phases which make up the model. The phases
+         to which the intensities belong are given by the value of
          _pd_calc_overall.component_presentation_order. These values correspond
          to the _pd_phase.id values of the phases contributing to the current
          diffractogram. As _pd_calc.component_intensities_net is used, the
@@ -5077,6 +5081,8 @@ save_pd_calc.component_intensities_net
     _pd_calc.component_intensities_* should be looped with
     either _pd_proc.intensity_net, _pd_meas.counts_*, and/or
     _pd_meas.intensity_*.
+
+    See also _pd_calc_component.intensity_net.
 ;
     _name.category_id             pd_calc
     _name.object_id               component_intensities_net
@@ -5116,6 +5122,8 @@ save_pd_calc.component_intensities_total
     _pd_calc.component_intensities_* should be looped with
     either _pd_proc.intensity_net, _pd_meas.counts_*, and/or
     _pd_meas.intensity_*.
+
+    See also _pd_calc_component.intensity_total.
 ;
     _name.category_id             pd_calc
     _name.object_id               component_intensities_total
@@ -5277,11 +5285,12 @@ save_pd_calc.point_id
     Used to identify a specific entry in a loop of values forming the
     calculated diffractogram.
 
-    Note that identical values of _pd_calc.point_id, _pd_meas.point_id, and
-    _pd_proc.point_id refer to the same point, and thus provide a way of
-    indicating that points in disparate loops are equivalent. The role of this
-    identifier should be adopted by _pd_data.point_id if measured, processed,
-    and/or calculated intensity values are combined in a single loop.
+    Note that identical values of _pd_calc.point_id,
+    _pd_calc_component.point_id, _pd_meas.point_id, and _pd_proc.point_id
+    refer to the same point, and thus provide a way of indicating that points
+    in disparate loops are equivalent. The role of this identifier should be
+    adopted by _pd_data.point_id if measured, processed, and/or calculated
+    intensity values are combined in a single loop.
 ;
     _name.category_id             pd_calc
     _name.object_id               point_id
@@ -5956,11 +5965,12 @@ save_pd_meas.point_id
     Used to identify a specific entry in a loop of values forming the
     measured diffractogram.
 
-    Note that identical values of _pd_calc.point_id, _pd_meas.point_id, and
-    _pd_proc.point_id refer to the same point, and thus provide a way of
-    indicating that points in disparate loops are equivalent. The role of this
-    identifier should be adopted by _pd_data.point_id if measured, processed,
-    and/or calculated intensity values are combined in a single loop.
+    Note that identical values of _pd_calc.point_id,
+    _pd_calc_component.point_id, _pd_meas.point_id, and _pd_proc.point_id
+    refer to the same point, and thus provide a way of indicating that points
+    in disparate loops are equivalent. The role of this identifier should be
+    adopted by _pd_data.point_id if measured, processed, and/or calculated
+    intensity values are combined in a single loop.
 ;
     _name.category_id             pd_meas
     _name.object_id               point_id
@@ -6703,11 +6713,12 @@ save_pd_proc.point_id
     Used to identify a specific entry in a loop of values forming the
     processed diffractogram.
 
-    Note that identical values of _pd_calc.point_id, _pd_meas.point_id, and
-    _pd_proc.point_id refer to the same point, and thus provide a way of
-    indicating that points in disparate loops are equivalent. The role of this
-    identifier should be adopted by _pd_data.point_id if measured, processed,
-    and/or calculated intensity values are combined in a single loop.
+    Note that identical values of _pd_calc.point_id,
+    _pd_calc_component.point_id, _pd_meas.point_id, and _pd_proc.point_id
+    refer to the same point, and thus provide a way of indicating that points
+    in disparate loops are equivalent. The role of this identifier should be
+    adopted by _pd_data.point_id if measured, processed, and/or calculated
+    intensity values are combined in a single loop.
 ;
     _name.category_id             pd_proc
     _name.object_id               point_id
@@ -10420,8 +10431,8 @@ save_PD_PHASE_MASS
 
     _definition.id                PD_PHASE_MASS
     _definition.scope             Category
-    _definition.class             Loop
-    _definition.update            2022-12-03
+    _definition.class             Set
+    _definition.update            2026-07-05
     _description.text
 ;
     This category describes the percent composition by mass of
@@ -10462,7 +10473,26 @@ save_PD_PHASE_MASS
          Blocks containing information about more than one phase or
          diffractogram must set a non-default value for _audit.schema.
 ;
+;
+         data_b1
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_1
+         _pd_phase_mass.percent  45.45(42)
 
+         data_b2
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_2
+         _pd_phase_mass.percent  37.42(63)
+
+         data_b3
+         _pd_diffractogram.id    A_DIFFRACTOGRAM
+         _pd_phase.id            PHASE_3
+         _pd_phase_mass.percent  17.13(53)
+;
+;
+         Identical as previous example, but values distributed amongst
+         blocks so as to maintain the default value of _audit.schema.
+;
 ;
          _audit.schema         Custom
 
@@ -10698,11 +10728,9 @@ save_PD_PREF_ORIENT
     to a histogram.
 
     March-Dollase and spherical harmonics corrections can be given explicitly.
-    For other methods, use the _pd_pref_orient.special_details.
+    See PD_PREF_ORIENT_MARCH_DOLLASE and PD_PREF_ORIENT_SPHERICAL_HARMONICS.
 
-    See Dollase, W. A. (1986). J. Appl. Cryst. 19, 267-272 and
-    Jarvinen, M. (1993). J. Appl. Cryst. 26, 525-531 for
-    further information.
+    For other methods, use the _pd_pref_orient.special_details.
 ;
     _name.category_id             CIF_PD_HEAD
     _name.object_id               PD_PREF_ORIENT
@@ -10745,8 +10773,8 @@ save_pd_pref_orient.geom
     The functional form of the March-Dollase or spherical harmonics
     correction depends on whether the data were collected in symmetric
     or asymmetric reflection or transmission, or capillary geometries.
-    See Section 3, Rowles & Buckley (2017) J. Appl. Cryst. (2017).
-    50, 240-251, for further discussion.
+    See Section 3, Rowles & Buckley (2017) J. Appl. Cryst. 50, 240-251,
+    for further discussion.
 
     In most Rietveld software, 'symmetric reflection' is the
     default implementation.
@@ -11278,35 +11306,28 @@ save_PD_PREF_ORIENT_SPHERICAL_HARMONICS
          _audit.schema has non-default value 'Custom'.
 ;
 ;
-         _pd_phase.id   PHASE_A
+         _pd_diffractogram.id  DIFFPAT_A
+         _pd_phase.id          PHASE_A
 
          loop_
          _pd_pref_orient_spherical_harmonics.id
-         _pd_pref_orient_spherical_harmonics.diffractogram_id
          _pd_pref_orient_spherical_harmonics.y_i
          _pd_pref_orient_spherical_harmonics.y_j
          _pd_pref_orient_spherical_harmonics.c_ij
          _pd_pref_orient_spherical_harmonics.c_ij_su
-         a   DIFFPAT_A   0   0   1.0     .
-         b   DIFFPAT_A   2   0   1.538   0.013
-         c   DIFFPAT_A   4   0   0.913   0.016
-         d   DIFFPAT_A   4  -3  -0.166   0.010
-         1   DIFFPAT_B   0   0   1.0     .
-         2   DIFFPAT_B   2   0   1.630   0.014
+         a   0   0   1.0     .
+         b   2   0   1.538   0.013
+         c   4   0   0.913   0.016
+         d   4  -3  -0.166   0.010
 ;
 ;
          Reporting of the preferred-orientation corrections for a phase with the
-         _pd_phase.id of 'PHASE_A'.
+         _pd_phase.id of 'PHASE_A' in the diffractogram 'DIFFPAT_A'.
 
-         This table is reporting preferred-orientation values pertinent to this
-         phase, as seen in two diffractograms: 'DIFFPAT_A' and 'DIFFPAT_B'.
-         There are four corrections applied in 'DIFFPAT_A' corresponding to
+         There are four corrections applied, corresponding to
          order/term pairs of (0,0), (2,0), (4,0), and (4, -3), and their
          magnitudes and standard uncertainties are 1.0, 1.538(13), 0.913(16),
-         and -0.166(10), respectively. There are two corrections applied in
-         'DIFFPAT_B' corresponding to order/term pairs of (0,0) and (2,0), and
-         their magnitudes and standard uncertainties are 1.0 and 1.630(14),
-         respectively.
+         and -0.166(10), respectively.
 ;
 
 save_
@@ -13488,6 +13509,8 @@ save_pd_qpa_internal_std.crystallinity_percent
     Knowledge of the internal standard crystallinity allows for the known mass
     addition to be corrected to a crystalline addition, which is the addition
     being analysed in a diffraction experiment.
+
+    See discussion in Rowles (2024) Powder Diffr. 39(4), 224-226.
 ;
     _name.category_id             pd_qpa_internal_std
     _name.object_id               crystallinity_percent
@@ -13633,6 +13656,8 @@ save_PD_QPA_OVERALL
 
     For a review on quantitative phase analysis, see Chapter 3.9 of
     International Tables, Vol. H, and references therein.
+
+    For usage examples, see the other PD_QPA_* categories.
 ;
     _name.category_id             CIF_PD_HEAD
     _name.object_id               PD_QPA_OVERALL
@@ -14808,4 +14833,6 @@ save_
 
        Update description of _pd_meas.position to point to modern calibration
        categories and to allow non-linear calibrations.
+
+       Convert PD_PHASE_MASS to Set category.
 ;
