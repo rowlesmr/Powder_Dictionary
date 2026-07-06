@@ -2926,17 +2926,17 @@ save_PD_CALIB_INCIDENT_INTENSITY
         _pd_calib_incident_intensity.incident_intensity      453.3
         _pd_calib_incident_intensity.incident_intensity_su     1.6
         _pd_calib_incident_intensity.diffractogram_id        STANDARD_30ffb964
-        _pd_calib_incident_intensity.phase_id                SRM1796_15341c3a
+        _pd_calib_incident_intensity.phase_id                SRM1976_15341c3a
 ;
 ;
         In the instrument identified as 9deaa4f1, the intensity incident on the
         specimen is 453.3 ± 1.6. This was determined through an analysis of
         the diffractogram, STANDARD_30ffb964, which contains the phase,
-        SRM1796_15341c3a.
+        SRM1976_15341c3a.
 ;
 ;
-        _pd_instr.id           a3643812
-        _pd_diffractogram.id   WHITE_POWDER
+        _pd_diffractogram.id        WHITE_POWDER
+        _pd_diffractogram.instr_id  a3643812
 
         loop_
         _pd_data.point_id
