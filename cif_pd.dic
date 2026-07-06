@@ -13524,24 +13524,27 @@ save_PD_QPA_INTERNAL_STD
 
     _description_example.case
 ;
-         _audit.schema          Custom
+         data_int_std
          _pd_diffractogram.id   DIFFRACTOGRAM_1
+         _pd_phase.id           NIST_ALUMINA_676A
 
-         loop_
-         _pd_phase_mass.phase_id
-         _pd_phase_mass.absolute
-         _pd_phase_mass.absolute_su
-         PHASE_1             42.81   0.56
-         PHASE_2             14.73   0.24
-         NIST_ALUMINA_676A   24.76   0.28
+         _pd_qpa_internal_std.mass_percent              25.000(2)
+         _pd_qpa_internal_std.crystallinity_percent     99.02(111)
 
-         _pd_qpa_internal_std.mass_percent              25.000
-         _pd_qpa_internal_std.mass_percent_su            0.002
-         _pd_qpa_internal_std.crystallinity_percent     99.02
-         _pd_qpa_internal_std.crystallinity_percent_su   1.11
-         _pd_qpa_internal_std.phase_id                  NIST_ALUMINA_676A
-
+         _pd_phase_mass.absolute  24.76(28)
          _pd_qpa_overall.method   ZMV
+
+         data_b1
+         _pd_diffractogram.id   DIFFRACTOGRAM_1
+         _pd_phase.id           PHASE_1
+
+         _pd_phase_mass.absolute  42.81(56)
+
+         data_b1
+         _pd_diffractogram.id   DIFFRACTOGRAM_1
+         _pd_phase.id           PHASE_2
+
+         _pd_phase_mass.absolute  14.73(24)
 ;
     _description_example.detail
 ;
