@@ -13510,6 +13510,8 @@ save_pd_qpa_internal_std.crystallinity_percent
     Knowledge of the internal standard crystallinity allows for the known mass
     addition to be corrected to a crystalline addition, which is the addition
     being analysed in a diffraction experiment.
+
+    See discussion in Rowles (2024) Powder Diffr. 39(4), 224-226.
 ;
     _name.category_id             pd_qpa_internal_std
     _name.object_id               crystallinity_percent
