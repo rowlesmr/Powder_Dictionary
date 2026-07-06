@@ -10997,32 +10997,36 @@ save_PD_PREF_ORIENT_MARCH_DOLLASE
       _description_example.case
       _description_example.detail
 ;
-         _audit.schema                Custom
+         data_p1
+         _pd_diffractogram.id  DIFFPAT_1
+         _pd_phase.id          PHASE_1
 
          loop_
          _pd_pref_orient_March_Dollase.id
-         _pd_pref_orient_March_Dollase.diffractogram_id
-         _pd_pref_orient_March_Dollase.phase_id
          _pd_pref_orient_March_Dollase.hkl
          _pd_pref_orient_March_Dollase.r
          _pd_pref_orient_March_Dollase.r_su
-         1   DIFFPAT_1   PHASE_1   [ 1 0 4 ]   0.79   0.12
-         2   DIFFPAT_1   PHASE_2   [ 0 0 1 ]   0.66   0.15
+         1   [ 1 0 4 ]   0.79   0.12
+
+         data_p2
+         _pd_diffractogram.id  DIFFPAT_1
+         _pd_phase.id          PHASE_2
+
+         _pd_pref_orient_March_Dollase.id   1
+         _pd_pref_orient_March_Dollase.hkl  [ 0 0 1 ]
+         _pd_pref_orient_March_Dollase.r    0.66(15)
 ;
 ;
-         Showing a fully qualified reporting of the preferred-orientation
-         corrections for a phase with a _pd_phase.id of 'PHASE_1' a phase
-         with a _pd_phase.id of 'PHASE_2', both belonging to a diffractogram
-         with a _pd_diffractogram.id of 'DIFFPAT_1.
+         Reporting the preferred-orientation corrections for phases PHASE_1
+         and PHASE_2, both from diffractogram DIFFPAT_1.
 
          The first phase has the preferred-orientation direction of 104, with a
          March r parameter value of 0.79 with a standard uncertainty of 0.12.
 
-         The second phase has the preferred-orientation direction of 001, with a
-         March r parameter value of 0.66 with a standard uncertainty of 0.15.
-
-         As information about more than one phase is present in the data block
-         _audit.schema takes a non-default value.
+         The second phase has the preferred-orientation direction of 001, with
+         a March r parameter value of 0.66 with a standard uncertainty of 0.15.
+         It is permissible to allocate values to Loop data names as if they
+         were Set data names if there is only a single row of data.
 ;
 ;
          _pd_diffractogram.id   DIFFPAT_A
