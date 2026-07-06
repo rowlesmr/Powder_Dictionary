@@ -9727,6 +9727,8 @@ save_PD_PEAK
       _description_example.case
       _description_example.detail
 ;
+         _pd_diffractogram.id  PEAKYPLOT
+
          loop_
          _pd_peak.id
          _pd_peak.2theta_centroid
@@ -9745,6 +9747,14 @@ save_PD_PEAK
          uncertainty (eg 1023 ± 7).
 ;
 ;
+         _pd_diffractogram.id        PEAKYPLOT
+         _pd_diffractogram.instr_id  Cu_workhorse
+
+         _pd_instr.id            Cu_workhorse
+         _pd_instr.radiation_id  Cu_tube
+
+         _diffrn_radiation.id  Cu_tube
+
          loop_
          _diffrn_radiation_wavelength.id
          _diffrn_radiation_wavelength.value
@@ -9773,6 +9783,10 @@ save_PD_PEAK
          d-spacing from the data's original 2θ results is given in the final
          column, which corresponds to 1.540596 Å, as given in the top-most
          loop.
+
+         The individual data names at the top are to associate the radiation
+         source with the instrument, and the instrument with the diffractogram,
+         allowing for the correct wavelength to be specified in the peak loop.
 ;
 
 save_
