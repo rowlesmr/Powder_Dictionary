@@ -5986,7 +5986,7 @@ save_pd_meas.position
 
     _definition.id                '_pd_meas.position'
     _alias.definition_id          '_pd_meas_position'
-    _definition.update            2022-10-11
+    _definition.update            2026-07-05
     _description.text
 ;
     A linear distance in millimetres corresponding to the
@@ -5996,13 +5996,12 @@ save_pd_meas.position
     trace from film or a strip chart recorder. This is an
     alternative to _pd_meas.2theta_scan, which should only be
     used for instruments that record intensities directly
-    against 2θ. For instruments where the position scale
-    is nonlinear, the data item _pd_meas.detector_id should
-    be used to record positions.
+    against 2θ.
 
     Calibration information, such as angle offsets or a
     function to convert this distance to a 2θ angle
-    or d-space, should be supplied with items from PD_CALIB.
+    or d-space, should be supplied with items from
+    PD_CALIB_XCOORD or PD_CALIBRATION.
 
     Do not confuse this with the instrument geometry
     descriptions given by _pd_instr.dist_*.
@@ -14835,6 +14834,9 @@ save_
 
        Renamed dictionary from CIF_POW to CIF_PD and the head category from
        PD_GROUP to CIF_PD_HEAD.
+
+       Update description of _pd_meas.position to point to modern calibration
+       categories and to allow non-linear calibrations.
 
        Convert PD_PHASE_MASS to Set category.
 ;
