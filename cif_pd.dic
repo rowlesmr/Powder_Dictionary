@@ -6853,6 +6853,8 @@ save_PD_DIFFRACTOGRAM
       _description_example.case
       _description_example.detail
 ;
+         data_combined
+
          _diffrn.id                    highTemp
          _diffrn.ambient_temperature   1273
          _diffrn.ambient_pressure      101.3
