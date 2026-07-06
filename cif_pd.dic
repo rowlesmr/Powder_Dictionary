@@ -7140,6 +7140,7 @@ save_PD_INSTR
         _pd_instr.dist_mono_spec              402
         _pd_instr.dist_src_mono                39
         _pd_instr.beam_size_ax                 10.5
+        _pd_instr.radiation_id                Hires_tube
         _pd_instr.slit_ax_mono_spec            10.0
         _pd_instr.slit_eq_mono_spec             0.5
         _pd_instr.soller_ax_mono_spec           2.5
@@ -7173,7 +7174,8 @@ save_PD_INSTR
 
         The radiation used in the instrument is defined by data names from the
         DIFFRN_RADIATION_WAVELENGTH category. In this case, it is pure Cu K\a~1~
-        radiation with a wavelength of 1.540596 Å.
+        radiation with a wavelength of 1.540596 Å. It is linked to the instrument
+        through the value of _pd_instr.radiation_id.
 ;
 ;
         _diffrn_radiation.id   Cobalt_tube
@@ -7197,6 +7199,7 @@ save_PD_INSTR
         _pd_instr.detector_circle_radius   117.5
         _pd_instr.dist_src_spec            117.5
         _pd_instr.beam_size_ax               9.8
+        _pd_instr.radiation_id             Cobalt_tube
         _pd_instr.slit_ax_src_spec           9.5
         _pd_instr.soller_ax_src_spec         5.0
         _pd_instr.source_size_ax             8.5
@@ -7223,7 +7226,8 @@ save_PD_INSTR
         The radiation used in the instrument is defined by data names from the
         DIFFRN_RADIATION_WAVELENGTH category. In this case, it is Co K\a
         radiation as described by the constituent seven wavelengths, as
-        described by G. Hölzer et al. Phys. Rev. A 56, 4554.
+        described by G. Hölzer et al. Phys. Rev. A 56, 4554. It is linked to
+        the instrument through the value of _pd_instr.radiation_id.
 ;
 
 save_
