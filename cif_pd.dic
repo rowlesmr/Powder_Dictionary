@@ -11920,7 +11920,7 @@ save_PD_PROC_LS
     _definition.update            2025-06-19
     _description.text
 ;
-    This section is used to define parameters relevant to the 
+    This section is used to define parameters relevant to the
     least-squares fit to the powder diffractogram indicated
     by _pd_proc_ls.diffractogram_id, using a Rietveld
     or other full-profile (e.g. Pawley or Le Bail methods) fit.
