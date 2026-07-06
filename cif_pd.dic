@@ -13504,12 +13504,13 @@ save_PD_QPA_INTERNAL_STD
 
     This can be done as
 
-        W~p~^abs.^ = W~p~^rel.^ * (W~s~^known^ / W~s~^rel.^)
+        W~p~^abs.^ = W~p~^rel.^ * (W~s~^known^ * X~s~ / W~s~^rel.^)
 
     where p and s represent the analyte phase and standard phase, respectively,
     W is the weight fraction, 'abs.' is absolute, 'rel.' is relative, and
-    'known' is the known addition. Here, W~s~^rel.^ is the relative amount of
-    standard as calculated by the quantification algorithm.
+    'known' is the known addition. X~s~ is the crystallinity of the internal
+    standard. Here, W~s~^rel.^ is the relative amount of standard as calculated
+    by the quantification algorithm.
 
     For a review on quantitative phase analysis, see Chapter 3.9 of
     International Tables, Vol. H, and references therein.
@@ -13552,23 +13553,24 @@ save_PD_QPA_INTERNAL_STD
          some NIST SRM676a) has been quantified using the ZMV algorithm after
          Rietveld refinement.
 
-         The diffraction pattern was collected from a specimen containing
-         25.000 ± 0.002 wt% internal standard (i.e. 1 g added to 3 g of unknown
-         to make a specimen with total weight of 4 g). The internal standard is
-         known to be 99.02 ± 1.11 % crystalline, and so the reported value of
-         _pd_phase_mass.absolute for the standard is:
+         The diffraction pattern was collected from a specimen with a known
+         addition of 25.000 ± 0.002 wt% internal standard (i.e. 1 g added to
+         3 g of unknown to make a specimen with total weight of 4 g). The
+         internal standard is known to be 99.02 ± 1.11 % crystalline, and so
+         the reported value of _pd_phase_mass.absolute for the standard is:
          25.000 * 0.9902 = 24.76 wt%.
 
          The weight fractions derived from the ZMV algorithm were then scaled as
 
-            W~p~^absolute^ = W~p~^ZMV^ * (W~s~^known^ / W~s~^ZMV^)
+            W~p~^absolute^ = W~p~^ZMV^ * (W~s~^known^ * X~s~ / W~s~^ZMV^)
 
          where W is the weight percentage, p is the phase, s is the standard
-         'ZMV' is the weight fraction from the ZMV algorithm, and 'known' is the
-         known addition of standard (_pd_qpa_internal_std.mass_percent). These
-         are the values reported as _pd_phase_mass.absolute. Any difference
-         between the sum of the _pd_phase_mass.absolute values and 100 wt% can
-         be attributed to unanalysed or amorphous phases.
+         'ZMV' is the weight fraction from the ZMV algorithm, 'known' is the
+         known addition of standard (_pd_qpa_internal_std.mass_percent), and
+         X~s~ is the crystallinity of the internal standard. These are the
+         values reported as _pd_phase_mass.absolute. Any difference between
+         the sum of the _pd_phase_mass.absolute values and 100 wt% can be
+         attributed to unanalysed or amorphous phases.
 
          The crystal structure of the internal standard is described by the
          information linked to the _pd_phase.id data item with the value
