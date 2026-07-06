@@ -7174,8 +7174,8 @@ save_PD_INSTR
 
         The radiation used in the instrument is defined by data names from the
         DIFFRN_RADIATION_WAVELENGTH category. In this case, it is pure Cu K\a~1~
-        radiation with a wavelength of 1.540596 Å. It is linked to the instrument
-        through the value of _pd_instr.radiation_id.
+        radiation with a wavelength of 1.540596 Å. It is linked to the
+        instrument through the value of _pd_instr.radiation_id.
 ;
 ;
         _diffrn_radiation.id   Cobalt_tube
