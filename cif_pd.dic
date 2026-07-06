@@ -5983,7 +5983,10 @@ save_pd_meas.position
     location where an intensity measurement is made.
     Used for detectors where a distance measurement is made
     as a direct observable, such as from a microdensitometer
-    trace from film or a strip chart recorder.
+    trace from film or a strip chart recorder. This is an
+    alternative to _pd_meas.2theta_scan, which should only be
+    used for instruments that record intensities directly
+    against 2θ.
 
     Calibration information, such as angle offsets or a
     function to convert this distance to a 2θ angle
