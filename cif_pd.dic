@@ -2281,8 +2281,8 @@ save_PD_CALIB
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see PD_CALIB_DETECTED_INTENSITY and
-    PD_QPA_INTERNAL_STD.
+    **DEPRECATED**
+    Please see PD_CALIB_DETECTED_INTENSITY and PD_QPA_INTERNAL_STD.
 
     This section defines the parameters used for the calibration
     of the instrument that are used directly or indirectly in the
@@ -2307,8 +2307,8 @@ save_pd_calib.detector_id
     _definition.update            2023-06-09
     _description.text
 ;
-    This item is deprecated. Please see
-    _pd_calib_detected_intensity.detector_id.
+    **DEPRECATED**
+    Please see _pd_calib_detected_intensity.detector_id.
 
     A code which identifies the detector or channel number in a
     position-sensitive, energy-dispersive or other multiple-detector
@@ -2336,8 +2336,8 @@ save_pd_calib.detector_response
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see
-    _pd_calib_detected_intensity.detector_response.
+    **DEPRECATED**
+    Please see _pd_calib_detected_intensity.detector_response.
 
     A value that indicates the relative sensitivity of each
     detector. This can compensate for differences in electronics,
@@ -2364,8 +2364,8 @@ save_pd_calib.detector_response_su
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see
-    _pd_calib_detected_intensity.detector_response_su.
+    **DEPRECATED**
+    Please see _pd_calib_detected_intensity.detector_response_su.
 
     Standard uncertainty of _pd_calib.detector_response.
 ;
@@ -2436,8 +2436,9 @@ save_pd_calib.std_internal_name
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see PD_QPA_INTERNAL_STD for alternate
-    methods of identifying an internal standard.
+    **DEPRECATED**
+    Please see PD_QPA_INTERNAL_STD for alternate methods of identifying
+    an internal standard.
 
     Identity of material(s) used as an internal intensity standard.
 ;
@@ -3113,8 +3114,8 @@ save_PD_CALIB_OFFSET
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see PD_CALIB_XCOORD and
-    PD_CALIB_XCOORD_OVERALL.
+    **DEPRECATED**
+    Please see PD_CALIB_XCOORD and PD_CALIB_XCOORD_OVERALL.
 
     Data items in this category define an offset angle (in degrees)
     used to calibrate 2θ (as defined in _pd_meas.2theta_*).
@@ -3151,9 +3152,10 @@ save_pd_calib.2theta_off_max
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see PD_CALIB_XCOORD. In general,
-    calibrations are now carried out over the given range, removing the need
-    to explicitly provide minima and maxima.
+    **DEPRECATED**
+    Please see PD_CALIB_XCOORD. In general, calibrations are now carried
+    out over the given range, removing the need to explicitly provide
+    minima and maxima.
 
     The maximum nominal 2θ value to which the offset given by
     _pd_calib.2theta_offset applies.
@@ -3180,9 +3182,10 @@ save_pd_calib.2theta_off_min
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see PD_CALIB_XCOORD. In general,
-    calibrations are now carried out over the given range, removing the need
-    to explicitly provide minima and maxima.
+    **DEPRECATED**
+    Please see PD_CALIB_XCOORD. In general, calibrations are now carried
+    out over the given range, removing the need to explicitly provide
+    minima and maxima.
 
     The minimum nominal 2θ value to which the offset given by
     _pd_calib.2theta_offset applies.
@@ -3209,7 +3212,8 @@ save_pd_calib.2theta_off_point
     _definition.update            2025-06-28
     _description.text
 ;
-    This item is deprecated. Please see _pd_calib_xcoord.nominal_2theta.
+    **DEPRECATED**
+    Please see _pd_calib_xcoord.nominal_2theta.
 
     The nominal 2θ value to which the offset given in
     _pd_calib.2theta_offset applies.
@@ -3236,7 +3240,8 @@ save_pd_calib.2theta_offset
     _definition.update            2025-06-28
     _description.text
 ;
-    This item is deprecated. Please see _pd_calib_xcoord.actual_2theta.
+    **DEPRECATED**
+    Please see _pd_calib_xcoord.actual_2theta.
 
     _pd_calib.2theta_offset defines an offset angle (in degrees)
     used to calibrate 2θ (as defined in _pd_meas.2theta_*).
@@ -3265,7 +3270,8 @@ save_pd_calib.2theta_offset_su
     _definition.update            2025-06-28
     _description.text
 ;
-    This item is deprecated. Please see _pd_calib_xcoord.actual_2theta_su.
+    **DEPRECATED**
+    Please see _pd_calib_xcoord.actual_2theta_su.
 
     Standard uncertainty of _pd_calib.2theta_offset.
 ;
@@ -3288,7 +3294,8 @@ save_pd_calib_offset.detector_id
     _definition.update            2025-06-28
     _description.text
 ;
-    This item is deprecated. Please see _pd_calib_xcoord.detector_id.
+    **DEPRECATED**
+    Please see _pd_calib_xcoord.detector_id.
 
     The detector to which the offset values relate.
     As a default value is defined, the detector id may be
@@ -3315,7 +3322,8 @@ save_pd_calib_offset.id
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _pd_calib_xcoord.id.
+    **DEPRECATED**
+    Please see _pd_calib_xcoord.id.
 
     An arbitrary code which identifies a particular 2θ offset
     description. As a default value is defined, this may be
@@ -3341,9 +3349,9 @@ save_PD_CALIB_STD
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see PD_CALIB_DETECTED_INTENSITY,
-    PD_CALIB_INCIDENT_INTENSITY, PD_CALIB_XCOORD_OVERALL, and
-    DIFFRN_RADIATION_WAVELENGTH.
+    **DEPRECATED**
+    Please see PD_CALIB_DETECTED_INTENSITY, PD_CALIB_INCIDENT_INTENSITY,
+    PD_CALIB_XCOORD_OVERALL, and DIFFRN_RADIATION_WAVELENGTH.
 
     This category identifies the external standards used for the calibration
     of the instrument that are used directly or indirectly in the
@@ -3381,8 +3389,7 @@ save_pd_calib_std.detector_id
     _definition.update            2025-07-09
     _description.text
 ;
-    This item is deprecated.
-
+    **DEPRECATED**
     Please see _pd_calib_detected_intensity.detector_id,
     _pd_calib_xcoord.detector_id, or _pd_calib_xcoord.nominal_channel, as
     necessary.
@@ -3421,7 +3428,8 @@ save_pd_calib_std.external_block_id
     _definition.update            2025-06-20
     _description.text
 ;
-    This item is deprecated. Please see:
+    **DEPRECATED**
+    Please see:
       - _pd_calib_detected_intensity.diffractogram_id
       - _pd_calib_incident_intensity.diffractogram_id
       - _pd_calib_xcoord_overall.diffractogram_id
@@ -3453,7 +3461,8 @@ save_pd_calib_std.external_name
     _definition.update            2025-07-07
     _description.text
 ;
-    This item is deprecated. Please see:
+    **DEPRECATED**
+    Please see:
       - PD_CALIB_DETECTED_INTENSITY
       - PD_CALIB_INCIDENT_INTENSITY
       - PD_CALIB_XCOORD
@@ -9003,7 +9012,8 @@ save_PD_MEAS_INFO_AUTHOR
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
+    **DEPRECATED**
+    Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
 
     This section contains information about the person(s)
     who conducted the measurement.
@@ -9028,8 +9038,8 @@ save_pd_meas_info_author.address
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.address and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.address and _audit_author_role.role.
 
     The address of the person who measured the data set. If there
     is more than one person, this will be looped with
@@ -9058,8 +9068,8 @@ save_pd_meas_info_author.email
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.email and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.email and _audit_author_role.role.
 
     The e-mail address of the person who measured the data set. If
     there is more than one person, this will be looped with
@@ -9088,8 +9098,8 @@ save_pd_meas_info_author.fax
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.fax and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.fax and _audit_author_role.role.
 
     The fax number of the person who measured the data set. If
     there is more than one person, this will be looped with
@@ -9120,8 +9130,8 @@ save_pd_meas_info_author.name
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.name and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.name and _audit_author_role.role.
 
     The name of the person who measured the data set. The family
     name(s), followed by a comma and including any dynastic
@@ -9151,8 +9161,8 @@ save_pd_meas_info_author.phone
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.phone and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.phone and _audit_author_role.role.
 
     The telephone number of the person who measured the data set.
     If there is more than one person, this will be looped with
@@ -11891,7 +11901,8 @@ save_PD_PROC_INFO_AUTHOR
     _definition.update            2026-05-18
     _description.text
 ;
-    This category is deprecated. Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
+    **DEPRECATED**
+    Please see AUDIT_AUTHOR and AUDIT_AUTHOR_ROLE.
 
     This section contains information about the person(s)
     who processed the data.
@@ -11916,8 +11927,8 @@ save_pd_proc_info_author.address
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.address and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.address and _audit_author_role.role.
 
     The address of the person who processed the data.
     If there is more than one person, this will be looped with
@@ -11946,8 +11957,8 @@ save_pd_proc_info_author.email
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.email and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.email and _audit_author_role.role.
 
     The e-mail address of the person who processed the
     data. If there is more than one person, this will be looped
@@ -11976,8 +11987,8 @@ save_pd_proc_info_author.fax
     _definition.update            2023-05-06
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.fax and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.fax and _audit_author_role.role.
 
     The fax number of the person who processed the data.
     If there is more than one person, this will be looped with
@@ -12008,8 +12019,8 @@ save_pd_proc_info_author.name
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.name and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.name and _audit_author_role.role.
 
     The name of the person who processed the data, if different
     from the person(s) who measured the data set. The family
@@ -12040,8 +12051,8 @@ save_pd_proc_info_author.phone
     _definition.update            2023-06-05
     _description.text
 ;
-    This item is deprecated. Please see _audit_author.phone and
-    _audit_author_role.role.
+    **DEPRECATED**
+    Please see _audit_author.phone and _audit_author_role.role.
 
     The telephone number of the person who processed the data.
     If there is more than one person, this will be looped
@@ -12250,7 +12261,8 @@ save_pd_proc_ls.pref_orient_corr
     _definition.update            2023-01-06
     _description.text
 ;
-    DEPRECATED. Use _pd_pref_orient.special_details, or if
+    **DEPRECATED**.
+    Use _pd_pref_orient.special_details, or if
     the correction can be described as a March-Dollase
     or spherical harmonics correction, use
     _pd_pref_orient_March_Dollase.* or
