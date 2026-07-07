@@ -5059,7 +5059,7 @@ save_PD_CALC
     Rietveld refinement.
 
     The intensities contained within PD_CALC represent one-dimensional
-    datasets, that is, intensity as a function of _pd_calc.point_id.
+    datasets, that is, intensity as a function of _pd_calc.point_id,
     2θ, d-spacing, time-of-flight, position, or other applicable
     diffraction-related coordinate. Intensities can be assigned to each
     data point through the equivalent *.point_id in PD_MEAS or PD_PROC.
@@ -5071,6 +5071,34 @@ save_PD_CALC
       _category_key.name
          '_pd_calc.point_id'
          '_pd_calc.diffractogram_id'
+
+    _description_example.case
+;
+         _pd_diffractogram.id  PATTERN_1
+
+         loop_
+         _pd_calc.point_id
+         _pd_calc.intensity_total
+         _pd_calc.intensity_bkg
+         1   25.994961   25.994961
+         2   26.200290   26.200290
+         3   26.404083   26.404083
+         4   26.606346   26.606346
+         #further data points follow
+;
+    _description_example.detail
+;
+         Tabulation of calculated diffraction data consisting of pattern
+         intensity, including background, and the calculated background.
+
+         The category key value associated with _pd_data.point_id is given
+         with every data point. The x-coordinate associated with each point
+         would be given in the appropratiate _pd_meas.* or _pd_proc.* loop.
+         Calculated data are normally presented with measured and processed
+         data in a single loop.
+
+         See PD_DATA for further examples.
+;
 
 save_
 
@@ -5361,6 +5389,32 @@ save_PD_MEAS
       _category_key.name
          '_pd_meas.point_id'
          '_pd_meas.diffractogram_id'
+
+    _description_example.case
+;
+         _pd_diffractogram.id  PATTERN_1
+
+         loop_
+         _pd_meas.point_id
+         _pd_meas.2theta_scan
+         _pd_meas.intensity_total
+         1   5.001   43.364
+         2   5.004   38.007
+         3   5.007   38.318
+         4   5.010   41.877
+         #further data points follow
+;
+    _description_example.detail
+;
+         Tabulation of measured diffraction data consisting of uncorrected
+         2θ values, and pattern intensity including background.
+
+         The category key value associated with _pd_data.point_id is given
+         with every data point. Measured data are normally presented with
+         processed and calculated data in a single loop.
+
+         See PD_DATA for further examples.
+;
 
 save_
 
@@ -6159,6 +6213,33 @@ save_PD_PROC
       _category_key.name
          '_pd_proc.point_id'
          '_pd_proc.diffractogram_id'
+
+    _description_example.case
+;
+        _pd_diffractogram.id  PATTERN_2
+
+        loop_
+         _pd_proc.point_id
+         _pd_proc.d_spacing
+         _pd_proc.intensity_total
+         _pd_proc.ls_weight
+         0   1.489225   0.60008   6528.86960
+         1   1.495170   0.63531   6316.37917
+         2   1.501138   0.64690   6107.85715
+         3   1.507131   0.65580   6162.14696
+         #further data points follow
+;
+    _description_example.detail
+;
+         Tabulation of processed diffraction data consisting of d-spacing,
+         intensity including background, and the least-squares weighting.
+
+         The category key value associated with _pd_data.point_id is given
+         with every data point. Processed data are normally presented with
+         measured and calculated data in a single loop.
+
+         See PD_DATA for further examples.
+;
 
 save_
 
@@ -10495,6 +10576,7 @@ save_PD_PHASE_MASS
       _description_example.case
       _description_example.detail
 ;
+         data_all_values
          _audit.schema         Custom
          _pd_diffractogram.id  A_DIFFRACTOGRAM
 
@@ -10574,6 +10656,37 @@ save_PD_PHASE_MASS
          percentages, those present in the sample before adding the internal
          standard, given by _pd_phase_mass.original.
 ;
+;
+         data_b1
+         _pd_diffractogram.id  ANOTHER_DIFFRACTOGRAM
+         _pd_phase.id          PHASE_1
+
+         _pd_phase_mass.percent   45.45
+         _pd_phase_mass.absolute  30.36
+         _pd_phase_mass.original  40.49
+
+         data_b2
+         _pd_diffractogram.id  ANOTHER_DIFFRACTOGRAM
+         _pd_phase.id          PHASE_2
+
+         _pd_qpa_internal_std.mass_percent    25.000
+
+         _pd_phase_mass.percent   37.42
+         _pd_phase_mass.absolute  25.00
+         _pd_phase_mass.original   0
+
+         data_b3
+         _pd_diffractogram.id  ANOTHER_DIFFRACTOGRAM
+         _pd_phase.id          PHASE_3
+
+         _pd_phase_mass.percent   17.13
+         _pd_phase_mass.absolute  11.44
+         _pd_phase_mass.original  15.26
+;
+;
+         As for previous example, but with a block structure conforming with
+         the default _audit.schema.
+;
 
 save_
 
@@ -10602,6 +10715,8 @@ save_pd_phase_mass.absolute
     standard phase is 22.5 wt%.
 
     See also _pd_phase_mass.original.
+
+    See Rowles (2024) Powder Diffr. 39(4), 224-226, for further discussion.
 ;
     _name.category_id             pd_phase_mass
     _name.object_id               absolute
@@ -10674,6 +10789,8 @@ save_pd_phase_mass.original
     _pd_phase_mass.absolute.
 
     See also _pd_phase_mass.absolute.
+
+    See Rowles (2024) Powder Diffr. 39(4), 224-226, for further discussion.
 ;
     _name.category_id             pd_phase_mass
     _name.object_id               original
