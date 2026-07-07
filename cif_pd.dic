@@ -4873,6 +4873,8 @@ save_PD_DATA
       _description_example.case
       _description_example.detail
 ;
+         _pd_diffractogram.id  PATTERN_1
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
@@ -4898,6 +4900,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  PATTERN_2
+
          loop_
          _pd_data.point_id
          _pd_meas.time_of_flight
@@ -4930,6 +4934,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  PATTERN_3
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
@@ -4957,6 +4963,8 @@ save_PD_DATA
          with the data name _pd_diffractogram.id given in that data block.
 ;
 ;
+         _pd_diffractogram.id  RAW_DATA
+
          loop_
          _pd_data.point_id
          _pd_meas.2theta_scan
@@ -6938,7 +6946,7 @@ save_PD_DIFFRACTOGRAM
             _pd_proc.intensity_total
             _pd_proc.ls_weight
             _pd_calc.intensity_total
-            _pd_proc.intensity_bkg_calc
+            _pd_calc.intensity_bkg
             5.01   43.364   0.0402   25.994961    25.994961
             5.04   38.007   0.0505   26.200290    26.200290
             5.07   38.318   0.0465   26.404083    26.404083
@@ -6995,7 +7003,7 @@ save_PD_DIFFRACTOGRAM
                _pd_proc.intensity_total
                _pd_proc.ls_weight
                _pd_calc.intensity_total
-               _pd_proc.intensity_bkg_calc
+               _pd_calc.intensity_bkg
                5.01   43.364   0.0402   25.994961    25.994961
                5.04   38.007   0.0505   26.200290    26.200290
                5.07   38.318   0.0465   26.404083    26.404083
