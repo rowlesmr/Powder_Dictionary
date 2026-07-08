@@ -13277,7 +13277,7 @@ save_PD_QPA_EXTERNAL_STD
 
     _description_example.case
 ;
-         data_ext_std_diffractogram
+         data_ext_std_values
             _pd_diffractogram.id         THE_REFERENCE
             _pd_diffractogram.instr_id   labmachine
             _pd_diffractogram.spec_id    REF_spec
@@ -13328,7 +13328,9 @@ save_PD_QPA_EXTERNAL_STD
          In the first block, the K factor, or diffractometer constant, is
          calculated from a diffraction pattern of a previously characterised
          standard, collected under set conditions on the given instrument; see
-         the _pd_qpa_overall.method enumeration external_standard.
+         the _pd_qpa_overall.method enumeration external_standard. The
+         reference diffraction pattern is given in another block, not shown
+         here, identified with the diffractogram id of THE_REFERENCE.
 
          In the second block, a diffraction pattern is given, along with
          information about the instrument, specimen used, and quantification
