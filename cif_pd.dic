@@ -160,9 +160,9 @@ save_CHEMICAL_CONN_BOND
 
     loop_
       _category_key.name
-         '_chemical_conn_bond.phase_id'
          '_chemical_conn_bond.atom_1'
          '_chemical_conn_bond.atom_2'
+         '_chemical_conn_bond.phase_id'
 
 save_
 
@@ -347,8 +347,8 @@ save_PD_AMORPHOUS
 
     loop_
       _category_key.name
-         '_pd_amorphous.peak_id'
          '_pd_amorphous.diffractogram_id'
+         '_pd_amorphous.peak_id'
 
     _description_example.case
 ;
@@ -1966,8 +1966,8 @@ save_PD_CALC_COMPONENT
     loop_
       _category_key.name
          '_pd_calc_component.diffractogram_id'
-         '_pd_calc_component.point_id'
          '_pd_calc_component.phase_id'
+         '_pd_calc_component.point_id'
 
     _description_example.case
 ;
@@ -3147,8 +3147,8 @@ save_PD_CALIB_OFFSET
 
     loop_
       _category_key.name
-         '_pd_calib_offset.id'
          '_pd_calib_offset.detector_id'
+         '_pd_calib_offset.id'
 
 save_
 
@@ -4886,8 +4886,8 @@ save_PD_DATA
 
     loop_
       _category_key.name
-         '_pd_data.point_id'
          '_pd_data.diffractogram_id'
+         '_pd_data.point_id'
 
     loop_
       _description_example.case
@@ -5078,8 +5078,8 @@ save_PD_CALC
 
     loop_
       _category_key.name
-         '_pd_calc.point_id'
          '_pd_calc.diffractogram_id'
+         '_pd_calc.point_id'
 
     _description_example.case
 ;
@@ -5396,8 +5396,8 @@ save_PD_MEAS
 
     loop_
       _category_key.name
-         '_pd_meas.point_id'
          '_pd_meas.diffractogram_id'
+         '_pd_meas.point_id'
 
     _description_example.case
 ;
@@ -6220,8 +6220,8 @@ save_PD_PROC
 
     loop_
       _category_key.name
-         '_pd_proc.point_id'
          '_pd_proc.diffractogram_id'
+         '_pd_proc.point_id'
 
     _description_example.case
 ;
@@ -14537,9 +14537,9 @@ save_REFLN
 
     loop_
       _category_key.name
-         '_refln.id'
          '_pd_refln.phase_id'
          '_refln.diffractogram_id'
+         '_refln.id'
          '_refln.structure_id'
 
 save_
