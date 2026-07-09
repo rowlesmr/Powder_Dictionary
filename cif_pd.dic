@@ -13255,7 +13255,7 @@ save_PD_QPA_EXTERNAL_STD
     _definition.id                PD_QPA_EXTERNAL_STD
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-06-20
+    _definition.update            2026-06-07
     _description.text
 ;
     This category identifies the external diffractogram used for
@@ -13273,57 +13273,77 @@ save_PD_QPA_EXTERNAL_STD
 ;
     _name.category_id             CIF_PD_HEAD
     _name.object_id               PD_QPA_EXTERNAL_STD
-    _category_key.name            '_pd_qpa_external_std.diffractogram_id'
+    _category_key.name            '_pd_qpa_external_std.instr_id'
 
     _description_example.case
 ;
-         data_ext_std_diffractogram
+         data_ext_std_values
             _pd_diffractogram.id         THE_REFERENCE
             _pd_diffractogram.instr_id   labmachine
+            _pd_diffractogram.spec_id    REF_spec
 
-            loop_
-            _pd_phase_mass.phase_id
-            _pd_phase_mass.absolute
-            _pd_phase_mass.absolute_su
-            NIST_ALUMINA_676A   99.02   1.11
+            _pd_char.id       REF_char
+            _pd_prep.id       REF_prep
+            _pd_prep.char_id  REF_char
+            _pd_spec.id       REF_spec
+            _pd_spec.prep_id  REF_prep
+
+            _pd_phase.id  NIST_ALUMINA_676A
+            _pd_phase_mass.absolute     99.02
+            _pd_phase_mass.absolute_su   1.11
 
             _pd_qpa_external_std.k_factor           293.36
+            _pd_qpa_external_std.diffractogram_id   THE_REFERENCE
             _pd_char.mass_atten_coef_mu_calc        3159
             _pd_qpa_overall.method                  external_standard
 
-         data_diffractogram_block
-            _audit.schema                Custom
+         data_diffraction_data
             _pd_diffractogram.id         DIFFRACTOGRAM_2
             _pd_diffractogram.instr_id   labmachine
+            _pd_diffractogram.spec_id    UNK_spec
 
-            loop_
-            _pd_phase_mass.phase_id
-            _pd_phase_mass.original
-            _pd_phase_mass.original_su
-            PHASE_1   42.81   0.56
-            PHASE_2   14.73   0.24
+            _pd_char.id       UNK_char
+            _pd_prep.id       UNK_prep
+            _pd_prep.char_id  UNK_char
+            _pd_spec.id       UNK_spec
+            _pd_spec.prep_id  UNK_prep
 
             _pd_char.mass_atten_coef_mu_calc        6940
             _pd_qpa_overall.method                  external_standard
+
+            # diffraction intensities go here
+
+         data_qpa_data_a
+            _pd_diffractogram.id   DIFFRACTOGRAM_2
+            _pd_phase.id           PHASE_1
+            _pd_phase_mass.original     42.81(56)
+
+         data_qpa_data_b
+            _pd_diffractogram.id   DIFFRACTOGRAM_2
+            _pd_phase.id           PHASE_2
+            _pd_phase_mass.original     14.73(24)
 ;
     _description_example.detail
 ;
          In the first block, the K factor, or diffractometer constant, is
          calculated from a diffraction pattern of a previously characterised
-         standard, collected under set conditions; see the
-         _pd_qpa_overall.method enumeration external_standard.
+         standard, collected under set conditions on the given instrument; see
+         the _pd_qpa_overall.method enumeration external_standard. The
+         reference diffraction pattern is given in another block, not shown
+         here, identified with the diffractogram id of THE_REFERENCE.
 
-         In the second block, a diffraction pattern containing two phases
-         (PHASE_1 and PHASE_2) has been quantified using the external standard
-         algorithm after Rietveld refinement. Knowing the instrument id value
-         used to collect the diffractogram of the unknown, the
-         _pd_qpa_external_std.diffractogram_id values can be looked at to find
-         one that has the same instrument id value, and thus the
-         _pd_qpa_external_std.k_factor value can be used to calculate the
-         absolute mass percent of the phases present in the
-         diffractogram.
+         In the second block, a diffraction pattern is given, along with
+         information about the instrument, specimen used, and quantification
+         method. These data are important to allow the K factor to be looked up
+         and to allow the quantification through finding the mass absorption
+         coefficient of the unknown specimen.
 
-         A Custom _audit.schema is required due to looping _pd_phase.id values.
+         The results of the quantification are reported in the final two
+         data blocks. Knowing the instrument id value, the
+         _pd_qpa_external_std.k_factor value can be looked up directly and used
+         to calculate the absolute mass percent of the phases present in the
+         diffractogram, given knowledge of the specimen mass absorption
+         coefficient, allowing the reported value to be verified.
 ;
 
 save_
@@ -13340,6 +13360,24 @@ save_pd_qpa_external_std.diffractogram_id
     _name.category_id             pd_qpa_external_std
     _name.object_id               diffractogram_id
     _name.linked_item_id          '_pd_diffractogram.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_pd_qpa_external_std.instr_id
+
+    _definition.id                '_pd_qpa_external_std.instr_id'
+    _definition.update            2026-07-06
+    _description.text
+;
+    The instrument (see _pd_instr.id) to which the external standard relates.
+;
+    _name.category_id             pd_qpa_external_std
+    _name.object_id               instr_id
+    _name.linked_item_id          '_pd_instr.id'
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
@@ -15055,6 +15093,8 @@ save_
        categories and to allow non-linear calibrations.
 
        Convert PD_PHASE_MASS to Set category.
+
+       Altered key of pd_qpa_external_std to be _pd_qpa_external_std.instr_id.
 
        Add DICTIONARY_AUTHOR loop.
 ;
