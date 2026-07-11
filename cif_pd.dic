@@ -14318,7 +14318,7 @@ save_pd_spec.mount_mode
 ;
     _name.category_id             pd_spec
     _name.object_id               mount_mode
-    _type.purpose                 Encode
+    _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Code
