@@ -160,9 +160,9 @@ save_CHEMICAL_CONN_BOND
 
     loop_
       _category_key.name
-         '_chemical_conn_bond.phase_id'
          '_chemical_conn_bond.atom_1'
          '_chemical_conn_bond.atom_2'
+         '_chemical_conn_bond.phase_id'
 
 save_
 
@@ -347,8 +347,8 @@ save_PD_AMORPHOUS
 
     loop_
       _category_key.name
-         '_pd_amorphous.peak_id'
          '_pd_amorphous.diffractogram_id'
+         '_pd_amorphous.peak_id'
 
     _description_example.case
 ;
@@ -1966,8 +1966,8 @@ save_PD_CALC_COMPONENT
     loop_
       _category_key.name
          '_pd_calc_component.diffractogram_id'
-         '_pd_calc_component.point_id'
          '_pd_calc_component.phase_id'
+         '_pd_calc_component.point_id'
 
     _description_example.case
 ;
@@ -2177,7 +2177,7 @@ save_PD_CALC_OVERALL
          1   4.03625   1053.9   1074.628 [ 21.34 204.535 513.156 ]
          2   4.07375   1060.2   1072.667 [ 21.45 205.755 516.456 ]
          3   4.11125   1017.3   1070.768 [ 21.55 206.975 513.256 ]
-         #...
+         # ...
 ;
     _description_example.detail
 ;
@@ -2750,7 +2750,7 @@ save_PD_CALIB_DETECTED_INTENSITY
          2   B   10.01   1364.36(57)   1318.22(94)
          3   A   10.02   1324.35(87)   1324.35(87)
          4   B   10.03   1298.36(74)   1254.45(102)
-         #...
+         # ...
 ;
 ;
          The detector responses of 1 and 1.035 for detectors A and B given
@@ -3147,8 +3147,8 @@ save_PD_CALIB_OFFSET
 
     loop_
       _category_key.name
-         '_pd_calib_offset.id'
          '_pd_calib_offset.detector_id'
+         '_pd_calib_offset.id'
 
 save_
 
@@ -3635,7 +3635,7 @@ save_PD_CALIB_XCOORD
           2   A  1114.742200     1.495170
           3   A  1119.201170     1.501138
           4   A  1123.677980     1.507131
-          ...
+          # ...
 
          loop_
          _pd_data.point_id
@@ -3648,7 +3648,7 @@ save_PD_CALIB_XCOORD
           ii  A  1114.742200     1.495170     0.635318   0.571286
           iii A  1119.201170     1.501138     0.646909   0.593895
           iv  A  1123.677980     1.507131     0.655807   0.620014
-          ...
+          # ...
 ;
 ;
          A diffractogram identified as "TOF_STD" was collected on the
@@ -3679,7 +3679,7 @@ save_PD_CALIB_XCOORD
           2   A  1141.764990     0.728226
           3   A  1146.332050     0.734770
           4   A  1150.917370     0.767760
-          ...
+          # ...
 ;
 ;
          A diffractogram identified as "SAMPLE_1" was collected on the
@@ -4460,7 +4460,7 @@ save_PD_CALIBRATION
          a   1    20051.5   4.1    1234
          b   2    20139.1   4.2    1434
          c   3    20226.7   4.3    1457
-         #...
+         # ...
 ;
     _description_example.detail
 ;
@@ -4892,8 +4892,8 @@ save_PD_DATA
 
     loop_
       _category_key.name
-         '_pd_data.point_id'
          '_pd_data.diffractogram_id'
+         '_pd_data.point_id'
 
     loop_
       _description_example.case
@@ -5084,8 +5084,8 @@ save_PD_CALC
 
     loop_
       _category_key.name
-         '_pd_calc.point_id'
          '_pd_calc.diffractogram_id'
+         '_pd_calc.point_id'
 
     _description_example.case
 ;
@@ -5402,8 +5402,8 @@ save_PD_MEAS
 
     loop_
       _category_key.name
-         '_pd_meas.point_id'
          '_pd_meas.diffractogram_id'
+         '_pd_meas.point_id'
 
     _description_example.case
 ;
@@ -6226,8 +6226,8 @@ save_PD_PROC
 
     loop_
       _category_key.name
-         '_pd_proc.point_id'
          '_pd_proc.diffractogram_id'
+         '_pd_proc.point_id'
 
     _description_example.case
 ;
@@ -6979,7 +6979,7 @@ save_PD_DIFFRACTOGRAM
             5.04   38.007   0.0505   26.200290    26.200290
             5.07   38.318   0.0465   26.404083    26.404083
             5.10   41.877   0.0452   26.606346    26.606346
-            #...
+            # ...
 ;
 ;
          A set of diffraction conditions, instrument settings, and specimen
@@ -7036,7 +7036,7 @@ save_PD_DIFFRACTOGRAM
                5.04   38.007   0.0505   26.200290    26.200290
                5.07   38.318   0.0465   26.404083    26.404083
                5.10   41.877   0.0452   26.606346    26.606346
-               #...
+               # ...
 ;
 ;
          A functionally identical data set as to the first example.
@@ -9244,7 +9244,7 @@ save_PD_MEAS_OVERALL
           _pd_meas.counts_total
           1   1234
           2   1256
-          #...
+          # ...
 ;
 ;
          The measured diffractogram is in equally spaced 2θ points, starting
@@ -9272,7 +9272,7 @@ save_PD_MEAS_OVERALL
           _pd_meas.counts_total
           1   5.02   1234
           2   5.04   1256
-          #...
+          # ...
 ;
 ;
          The information here applies to the diffractogram with the id
@@ -9295,7 +9295,7 @@ save_PD_MEAS_OVERALL
           _pd_meas.intensity_total_su
           1   50300   1234   23
           2   50400   1256   24
-          #...
+          # ...
 ;
 ;
          The information here applies to the diffractogram with the id
@@ -10637,7 +10637,7 @@ save_PD_PHASE_MASS
 ;
 ;
          data_all_results
-         _audit_schema         Custom
+         _audit.schema         Custom
          _pd_diffractogram.id  ANOTHER_DIFFRACTOGRAM
 
          _pd_qpa_internal_std.mass_percent    25.000
@@ -12554,7 +12554,7 @@ save_PD_PROC_OVERALL
           _pd_proc.intensity_total_su
           1   1234   23
           2   1256   24
-          #...
+          # ...
 ;
 ;
          The processed diffractogram is in equally-spaced 2θ points, starting
@@ -13261,7 +13261,7 @@ save_PD_QPA_EXTERNAL_STD
     _definition.id                PD_QPA_EXTERNAL_STD
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-06-20
+    _definition.update            2026-06-07
     _description.text
 ;
     This category identifies the external diffractogram used for
@@ -13279,57 +13279,77 @@ save_PD_QPA_EXTERNAL_STD
 ;
     _name.category_id             CIF_PD_HEAD
     _name.object_id               PD_QPA_EXTERNAL_STD
-    _category_key.name            '_pd_qpa_external_std.diffractogram_id'
+    _category_key.name            '_pd_qpa_external_std.instr_id'
 
     _description_example.case
 ;
-         data_ext_std_diffractogram
+         data_ext_std_values
             _pd_diffractogram.id         THE_REFERENCE
             _pd_diffractogram.instr_id   labmachine
+            _pd_diffractogram.spec_id    REF_spec
 
-            loop_
-            _pd_phase_mass.phase_id
-            _pd_phase_mass.absolute
-            _pd_phase_mass.absolute_su
-            NIST_ALUMINA_676A   99.02   1.11
+            _pd_char.id       REF_char
+            _pd_prep.id       REF_prep
+            _pd_prep.char_id  REF_char
+            _pd_spec.id       REF_spec
+            _pd_spec.prep_id  REF_prep
+
+            _pd_phase.id  NIST_ALUMINA_676A
+            _pd_phase_mass.absolute     99.02
+            _pd_phase_mass.absolute_su   1.11
 
             _pd_qpa_external_std.k_factor           293.36
+            _pd_qpa_external_std.diffractogram_id   THE_REFERENCE
             _pd_char.mass_atten_coef_mu_calc        3159
             _pd_qpa_overall.method                  external_standard
 
-         data_diffractogram_block
-            _audit.schema                Custom
+         data_diffraction_data
             _pd_diffractogram.id         DIFFRACTOGRAM_2
             _pd_diffractogram.instr_id   labmachine
+            _pd_diffractogram.spec_id    UNK_spec
 
-            loop_
-            _pd_phase_mass.phase_id
-            _pd_phase_mass.original
-            _pd_phase_mass.original_su
-            PHASE_1   42.81   0.56
-            PHASE_2   14.73   0.24
+            _pd_char.id       UNK_char
+            _pd_prep.id       UNK_prep
+            _pd_prep.char_id  UNK_char
+            _pd_spec.id       UNK_spec
+            _pd_spec.prep_id  UNK_prep
 
             _pd_char.mass_atten_coef_mu_calc        6940
             _pd_qpa_overall.method                  external_standard
+
+            # diffraction intensities go here
+
+         data_qpa_data_a
+            _pd_diffractogram.id   DIFFRACTOGRAM_2
+            _pd_phase.id           PHASE_1
+            _pd_phase_mass.original     42.81(56)
+
+         data_qpa_data_b
+            _pd_diffractogram.id   DIFFRACTOGRAM_2
+            _pd_phase.id           PHASE_2
+            _pd_phase_mass.original     14.73(24)
 ;
     _description_example.detail
 ;
          In the first block, the K factor, or diffractometer constant, is
          calculated from a diffraction pattern of a previously characterised
-         standard, collected under set conditions; see the
-         _pd_qpa_overall.method enumeration external_standard.
+         standard, collected under set conditions on the given instrument; see
+         the _pd_qpa_overall.method enumeration external_standard. The
+         reference diffraction pattern is given in another block, not shown
+         here, identified with the diffractogram id of THE_REFERENCE.
 
-         In the second block, a diffraction pattern containing two phases
-         (PHASE_1 and PHASE_2) has been quantified using the external standard
-         algorithm after Rietveld refinement. Knowing the instrument id value
-         used to collect the diffractogram of the unknown, the
-         _pd_qpa_external_std.diffractogram_id values can be looked at to find
-         one that has the same instrument id value, and thus the
-         _pd_qpa_external_std.k_factor value can be used to calculate the
-         absolute mass percent of the phases present in the
-         diffractogram.
+         In the second block, a diffraction pattern is given, along with
+         information about the instrument, specimen used, and quantification
+         method. These data are important to allow the K factor to be looked up
+         and to allow the quantification through finding the mass absorption
+         coefficient of the unknown specimen.
 
-         A Custom _audit.schema is required due to looping _pd_phase.id values.
+         The results of the quantification are reported in the final two
+         data blocks. Knowing the instrument id value, the
+         _pd_qpa_external_std.k_factor value can be looked up directly and used
+         to calculate the absolute mass percent of the phases present in the
+         diffractogram, given knowledge of the specimen mass absorption
+         coefficient, allowing the reported value to be verified.
 ;
 
 save_
@@ -13346,6 +13366,24 @@ save_pd_qpa_external_std.diffractogram_id
     _name.category_id             pd_qpa_external_std
     _name.object_id               diffractogram_id
     _name.linked_item_id          '_pd_diffractogram.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_pd_qpa_external_std.instr_id
+
+    _definition.id                '_pd_qpa_external_std.instr_id'
+    _definition.update            2026-07-06
+    _description.text
+;
+    The instrument (see _pd_instr.id) to which the external standard relates.
+;
+    _name.category_id             pd_qpa_external_std
+    _name.object_id               instr_id
+    _name.linked_item_id          '_pd_instr.id'
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
@@ -14286,7 +14324,7 @@ save_pd_spec.mount_mode
 ;
     _name.category_id             pd_spec
     _name.object_id               mount_mode
-    _type.purpose                 Encode
+    _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Code
@@ -14543,9 +14581,9 @@ save_REFLN
 
     loop_
       _category_key.name
-         '_refln.id'
          '_pd_refln.phase_id'
          '_refln.diffractogram_id'
+         '_refln.id'
          '_refln.structure_id'
 
 save_
@@ -15064,6 +15102,8 @@ save_
 
        Added _pd_calib_xcoord.detector_id as linked key. Removed
        _pd_calib_xcoord.xcoord_overall_id as key.
+
+       Altered key of pd_qpa_external_std to be _pd_qpa_external_std.instr_id.
 
        Add DICTIONARY_AUTHOR loop.
 ;
