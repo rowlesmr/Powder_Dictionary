@@ -3555,6 +3555,13 @@ save_PD_CALIB_XCOORD
              _pd_diffractogram.id        CALIBRATION_DIFFRACTOGRAM
              _pd_diffractogram.instr_id  INSTRUMENT_1
 
+             _pd_calib_xcoord_overall.id                calib_1
+             _pd_calib_xcoord_overall.diffractogram_id  CALIBRATION_DIFFRACTOGRAM
+             _pd_calib_xcoord_overall.phase_id          SRM640E
+
+             _pd_instr_detector.id                A
+             _pd_instr_detector.xcood_overall_id  calib_1
+
              loop_
              _pd_calib_xcoord.id
              _pd_calib_xcoord.nominal_2theta
@@ -3609,10 +3616,14 @@ save_PD_CALIB_XCOORD
          2θ axis of other diffractograms collected on the same
          instrument.
 
+         The calibration conditions, "calib_1", are assigned to the calibrated
+         detector, "A", via the linked data name
+         _pd_instr_detector.xcood_overall_id.
+
          The data block "unknownsample" contains a diffractogram
          identified as "UNKNOWN_DIFFRACTOGRAM", which was collected on the
-         same instrument, "INSTRUMENT_1". The combination of instrument id
-         and detector id is sufficient to identify the applicable
+         same instrument, "INSTRUMENT_1". The combination of instrument id,
+         detector id, and xcood_overall id identifies the applicable
          calibration information.
 ;
 ;
