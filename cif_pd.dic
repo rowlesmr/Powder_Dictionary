@@ -3552,11 +3552,11 @@ save_PD_CALIB_XCOORD
          data_calibrationinformation
              _audit_dataset.id  defa753a-f10b-4d4e-93a2-b2379d1d1f6c
 
-             _pd_diffractogram.id        CALIBRATION_DIFFRACTOGRAM
+             _pd_diffractogram.id        CALIB_DIFFRACTOGRAM
              _pd_diffractogram.instr_id  INSTRUMENT_1
 
              _pd_calib_xcoord_overall.id                calib_1
-             _pd_calib_xcoord_overall.diffractogram_id  CALIBRATION_DIFFRACTOGRAM
+             _pd_calib_xcoord_overall.diffractogram_id  CALIB_DIFFRACTOGRAM
              _pd_calib_xcoord_overall.phase_id          SRM640E
 
              _pd_instr_detector.id                A
@@ -3606,7 +3606,7 @@ save_PD_CALIB_XCOORD
 ;
 ;
          The data block "calibrationinformation" contains a diffractogram
-         identified as "CALIBRATION_DIFFRACTOGRAM", which was collected on
+         identified as "CALIB_DIFFRACTOGRAM", which was collected on
          the instrument identified as "INSTRUMENT_1", to act as a
          calibration standard for the 2θ axis.
 
