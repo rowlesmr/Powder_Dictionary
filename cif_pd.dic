@@ -4267,25 +4267,6 @@ save_pd_calib_xcoord.nominal_wavelength
 
 save_
 
-save_pd_calib_xcoord.xcoord_overall_id
-
-    _definition.id                '_pd_calib_xcoord.xcoord_overall_id'
-    _definition.update            2023-07-10
-    _description.text
-;
-    A code which identifies the particular set of overall calibration conditions
-    under which the calibration was calculated.
-;
-    _name.category_id             pd_calib_xcoord
-    _name.object_id               xcoord_overall_id
-    _name.linked_item_id          '_pd_calib_xcoord_overall.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-
-save_
-
 save_PD_CALIB_XCOORD_OVERALL
 
     _definition.id                PD_CALIB_XCOORD_OVERALL
@@ -4294,7 +4275,7 @@ save_PD_CALIB_XCOORD_OVERALL
     _definition.update            2025-06-19
     _description.text
 ;
-    This category gives the overall information about the x-coordinate
+    This category gives the overall information about the X coordinate
     calibration applied to a given diffractogram.
 
     See PD_CALIB_XCOORD.
@@ -4323,12 +4304,21 @@ save_PD_CALIB_XCOORD_OVERALL
          _pd_calib_xcoord_overall.id                 B
          _pd_calib_xcoord_overall.special_details
                                   "Scanned through direct beam with fine slit."
+
+         loop_
+            _pd_instr_detector.id
+            _pd_instr_detector.xcood_overall_id
+            1  B
+            2  B
 ;
 ;
          Calibration values given using PD_CALIB_XCOORD category data items
          which refer to the overall calibration conditions identified by
          "B" were derived by scanning the detector through the
          direct beam with a fine slit.
+
+         The two detectors calibrated with those overall calibration conditions
+         are as given.
 ;
 
 save_
@@ -9020,6 +9010,25 @@ save_pd_instr_detector.instr_id
     _name.linked_item_id          '_pd_instr.id'
     _type.purpose                 Link
     _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_pd_instr_detector.xcoord_overall_id
+
+    _definition.id                '_pd_instr_detector.xcoord_overall_id'
+    _definition.update            2026-07-10
+    _description.text
+;
+    A code which identifies the particular set of overall X coordinate
+    calibration conditions under which the calibration was calculated.
+;
+    _name.category_id             pd_instr_detector
+    _name.object_id               xcoord_overall_id
+    _name.linked_item_id          '_pd_calib_xcoord_overall.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
 
@@ -15101,7 +15110,8 @@ save_
        Convert PD_PHASE_MASS to Set category.
 
        Added _pd_calib_xcoord.detector_id as linked key. Removed
-       _pd_calib_xcoord.xcoord_overall_id as key.
+       _pd_calib_xcoord.xcoord_overall_id as key. Added
+       _pd_instr_detector.xcoord_overall_id as linked non-key data name
 
        Altered key of pd_qpa_external_std to be _pd_qpa_external_std.instr_id.
 
